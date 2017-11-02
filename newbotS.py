@@ -77,8 +77,8 @@ Hmid = kh.getProfile().mid
 Jmid = kj.getProfile().mid
 Lmid = kl.getProfile().mid
 Nmid = kn.getProfile().mid
-Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Jmid,Lmid,Nmid,admid]
-admin = ["udee46099e25e71f1fd1817cae9e7c429","u060faad0b4c2f6561f4bbdeef3670312"]
+Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Jmid,Lmid,Nmid,admid,"udee46099e25e71f1fd1817cae9e7c429"]
+admin = ["udee46099e25e71f1fd1817cae9e7c429"]
 protectname = []
 protecturl = []
 protection = []
@@ -96,9 +96,9 @@ wait = {
     'leaveRoom':False,
     'timeline':True,
     'autoAdd':True,
-    'message':"感謝加",
+    'message':"tq dah add salam kenal je.no pm no von ngeyel tabok loo",
     "lang":"JP",
-    "comment":"http://line.me/ti/p/~fang_xin\nAuto like By fung xin 放芯",
+    "comment":"http://line.me/ti/p/~fang_xin\nAuto like By u_k.morayena 放芯",
     "likeOn":True,
     "commentOn":True,
     "commentBlack":{},
@@ -115,7 +115,7 @@ wait = {
     "pname":{},
     "pro_name":{},
     "atjointicket":True,
-    "string":"Boter",
+    "string":"u.k_morayena",
     "kickme":False
     }
 
@@ -138,7 +138,6 @@ cancelinvite = {
 
 setTime = {}
 setTime = wait2['setTime']
-
 
 def sendMessage(to, text, contentMetadata={}, contentType=0):
     mes = Message()
@@ -214,7 +213,6 @@ def bot(op):
                                             ke.kickoutFromGroup(op.param1,[op.param2])
                                         except:
                                             pass
-
                                         cl.sendText(op.param1,"群名已鎖")
                                         cl.sendText(op.param1,"更改者為")
                                         c = Message(to=op.param1, from_=None, text=None, contentType=13)
@@ -222,13 +220,16 @@ def bot(op):
                                         cl.sendMessage(c)
         if op.param3 == "4":
             if op.param1 in protecturl:
-				group = cl.getGroup(op.param1)
-				if group.preventJoinByTicket == False:
-					group.preventJoinByTicket = True
-					cl.updateGroup(group)
-					cl.sendText(op.param1,"不能亂開網址ㄡ")
-				else:
-					pass
+                if op.param2 in admin:
+                    pass
+                elif wait["P"] == True:
+				     group = cl.getGroup(op.param1)
+				     if group.preventJoinByTicket == False:
+					     group.preventJoinByTicket = True
+					     cl.updateGroup(group)
+					     cl.sendText(op.param1,"---[不能亂開網址ㄡ]---")
+				     else:
+					     pass
         if op.type == 0:
             return
         if op.type == 22:
@@ -272,7 +273,7 @@ def bot(op):
                elif wait["dblack"] == True:
                    if msg.contentMetadata["mid"] in wait["commentBlack"]:
                         del wait["commentBlack"][msg.contentMetadata["mid"]]
-                        cl.sendText(msg.to,"Dihapus")
+                        cl.sendText(msg.to,"完成")
                         wait["dblack"] = False
 
                    else:
@@ -351,6 +352,150 @@ def bot(op):
                 for target in targets:
                    try:
                       random.choice(KAC).kickoutFromGroup(msg.to,[target])
+                   except:
+                      pass
+            elif ("AdBye " in msg.text):
+              if msg.from_ in admin:
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      ad.kickoutFromGroup(msg.to,[target])
+                   except:
+                      pass
+            elif ("KiBye " in msg.text):
+              if msg.from_ in admin:
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      ki.kickoutFromGroup(msg.to,[target])
+                   except:
+                      pass
+            elif ("KkBye " in msg.text):
+              if msg.from_ in admin:
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      kk.kickoutFromGroup(msg.to,[target])
+                   except:
+                      pass
+            elif ("KcBye " in msg.text):
+              if msg.from_ in admin:
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      kc.kickoutFromGroup(msg.to,[target])
+                   except:
+                      pass
+            elif ("KdBye " in msg.text):
+              if msg.from_ in admin:
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      kd.kickoutFromGroup(msg.to,[target])
+                   except:
+                      pass
+            elif ("KeBye " in msg.text):
+              if msg.from_ in admin:
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      ke.kickoutFromGroup(msg.to,[target])
+                   except:
+                      pass
+            elif ("KfBye " in msg.text):
+              if msg.from_ in admin:
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      kf.kickoutFromGroup(msg.to,[target])
+                   except:
+                      pass
+            elif ("KgBye " in msg.text):
+              if msg.from_ in admin:
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      kg.kickoutFromGroup(msg.to,[target])
+                   except:
+                      pass
+            elif ("KhBye " in msg.text):
+              if msg.from_ in admin:
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      kh.kickoutFromGroup(msg.to,[target])
+                   except:
+                      pass
+            elif ("KjBye " in msg.text):
+              if msg.from_ in admin:
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      kj.kickoutFromGroup(msg.to,[target])
+                   except:
+                      pass
+            elif ("KlBye " in msg.text):
+              if msg.from_ in admin:
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      kl.kickoutFromGroup(msg.to,[target])
+                   except:
+                      pass
+            elif ("KnBye " in msg.text):
+              if msg.from_ in admin:
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      kn.kickoutFromGroup(msg.to,[target])
                    except:
                       pass
             elif "Kick " in msg.text:
@@ -636,7 +781,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
             elif "Id" == msg.text:
-                cl.sendText(msg.to,msg.to)
+                cl.sendText(msg.to,msg.to) 
             elif msg.text in ["Mid","mid","MID"]:
                 print "SUKSES -- SHOW MID USER"
                 cl.sendText(msg.to, msg.from_)
@@ -1435,7 +1580,6 @@ def bot(op):
                     msg.text = txt
                     msg.contentMetadata = {u'MENTION':json.dumps({"MENTIONEES":d})}
                     cl.sendMessage(msg)
-
 #-----------------------------------------------
 
 #-----------------------------------------------
@@ -1619,6 +1763,7 @@ def bot(op):
                                     cl.findAndAddContactsByMid(target)
                                     ki.findAndAddContactsByMid(target)
                                     kk.findAndAddContactsByMid(target)
+
                                 except:
                                     ki.sendText(msg.to,"Error")
                     else:
@@ -1656,7 +1801,7 @@ def bot(op):
                     cl.sendText(msg.to,"已關閉")
                     del wait['pname'][msg.to]
                 else:
-                    cl.sendText(msg.to,"鎖群名已關閉")
+                    cl.sendText(msg.to,"鎖群名已關啟")
             elif "Invite:on" == msg.text:
 				gid = msg.to
 				autocancel[gid] = "poni"
@@ -1736,7 +1881,7 @@ def bot(op):
                             pass
         if op.type == 19:
            if op.param1 in protection:
-               OWN = "u7d8710559bda136ae7030477f83069df"
+               OWN = "udee46099e25e71f1fd1817cae9e7c429"
            if op.param2 in OWN:
                return
            if op.param2 in Bots:
@@ -1785,20 +1930,23 @@ def bot(op):
 
         if op.param3 == "1":
             if op.param1 in protectname:
-                group = cl.getGroup(op.param1)
-                try:
-					group.name = wait["pro_name"][op.param1]
-					cl.updateGroup(group)
-					cl.sendText(op.param1, "Groupname protect now")
-					wait["blacklist"][op.param2] = True
-					f=codecs.open('st2__b.json','w','utf-8')
-					json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
-                except Exception as e:
-                    print e
+                if op.param2 in admin:
                     pass
+                elif wait["P"] == True:
+                     group = cl.getGroup(op.param1)
+                     try:
+                         group.name = wait["pro_name"][op.param1]
+                         cl.updateGroup(group)
+                         cl.sendText(op.param1, "Groupname protect now")
+                         wait["blacklist"][op.param2] = True
+                         f=codecs.open('st2__b.json','w','utf-8')
+                         json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
+                     except Exception as e:
+                         print e
+                         pass
 
         if op.param1 in autocancel:
-           OWN ="udee46099e25e71f1fd1817cae9e7c429","u060faad0b4c2f6561f4bbdeef3670312"]
+           OWN = "udee46099e25e71f1fd1817cae9e7c429"
            if op.param2 in OWN:
               pass
            if op.param2 in Bots:
@@ -1822,6 +1970,7 @@ def bot(op):
                kj.cancelGroupInvitation(op.param1,InviterX)
                kl.cancelGroupInvitation(op.param1,InviterX)
                kn.cancelGroupInvitation(op.param1,InviterX)
+
 
 
         if op.type == 19:
@@ -2380,6 +2529,7 @@ def bot(op):
                         kn.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G.preventJoinByTicket = True
                         kk.updateGroup(G)
+
             except:
                 pass
 
@@ -2408,41 +2558,45 @@ def nameUpdate():
         try:
             if wait["clock"] == True:
                 profile = ad.getProfile()
-                profile.displayName = "Cl.Bot"
+                profile.displayName = "💋🕉unni͡° ͜ʖ ͡°oppa🕉"
                 ad.updateProfile(profile)
                 profile = ki.getProfile()
-                profile.displayName = "Ki.Bot"
+                profile.displayName = "💋🕉unni͡° ͜ʖ ͡°oppa🕉"
                 ki.updateProfile(profile)
                 profile = kk.getProfile()
-                profile.displayName = "Kk.Bot"
+                profile.displayName = "💋🕉unni͡° ͜ʖ ͡°oppa🕉"
                 kk.updateProfile(profile)
                 profile = kc.getProfile()
-                profile.displayName = "Kc.Bot"
+                profile.displayName = "💋🕉unni͡° ͜ʖ ͡°oppa🕉"
                 kc.updateProfile(profile)
                 profile = kd.getProfile()
-                profile.displayName = "Kd.Bot"
+                profile.displayName = "💋🕉unni͡° ͜ʖ ͡°oppa🕉"
                 kd.updateProfile(profile)
                 profile = ke.getProfile()
-                profile.displayName = "Ke.Bot"
+                profile.displayName = "💋🕉unni͡° ͜ʖ ͡°oppa🕉"
                 ke.updateProfile(profile)
                 profile = kf.getProfile()
-                profile.displayName = "Kf.Bot"
+                profile.displayName = "💋🕉unni͡° ͜ʖ ͡°oppa🕉"
                 kf.updateProfile(profile)
                 profile = kg.getProfile()
-                profile.displayName = "Kg.Bot"
+                profile.displayName = "💋🕉unni͡° ͜ʖ ͡°oppa🕉"
                 kg.updateProfile(profile)
                 profile = kh.getProfile()
-                profile.displayName = "Kh.Bot"
+                profile.displayName = "💋🕉unni͡° ͜ʖ ͡°oppa🕉"
                 kh.updateProfile(profile)
                 profile = kj.getProfile()
-                profile.displayName = "Kj.Bot"
+                profile.displayName = "💋🕉unni͡° ͜ʖ ͡°oppa🕉"
                 kj.updateProfile(profile)
                 profile = kl.getProfile()
-                profile.displayName = "Kl.Bot"
+                profile.displayName = "💋🕉unni͡° ͜ʖ ͡°oppa🕉"
                 kl.updateProfile(profile)
                 profile = kn.getProfile()
-                profile.displayName = "Kn.Bot"
+                profile.displayName = "💋🕉unni͡° ͜ʖ ͡°oppa🕉"
                 kn.updateProfile(profile)
+
+
+
+
 
                 #profile = cl.getProfile()
                 #profile.statusMessage = wait["string"]
