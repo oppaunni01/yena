@@ -1971,10 +1971,6 @@ def bot(op):
                kj.cancelGroupInvitation(op.param1,InviterX)
                kl.cancelGroupInvitation(op.param1,InviterX)
                kn.cancelGroupInvitation(op.param1,InviterX)
-               pass
-               wait["blacklist"][op.param2] = True
-               f=codecs.open('st2__b.json','w','utf-8')
-               json.dump(wait["blacklist"], f, sort_keys=True, indent=4,ensure_ascii=False)
 
 
 
@@ -2025,7 +2021,7 @@ def bot(op):
                         kn.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G.preventJoinByTicket = True
                         ki.updateGroup(G)
-                        pass
+
                         wait["blacklist"][op.param2] = True
 
 
@@ -2071,7 +2067,7 @@ def bot(op):
                         kn.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G.preventJoinByTicket = True
                         cl.updateGroup(G)
-                        pass
+
                         wait["blacklist"][op.param2] = True
 
 
@@ -2160,7 +2156,6 @@ def bot(op):
                         kn.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G.preventJoinByTicket = True
                         kd.updateGroup(G)
-                        pass
                         wait["blacklist"][op.param2] = True
 
                 elif op.param3 in Dmid:
@@ -2205,7 +2200,6 @@ def bot(op):
                         kn.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G.preventJoinByTicket = True
                         ke.updateGroup(G)
-                        pass
                         wait["blacklist"][op.param2] = True
 
                 elif op.param3 in Emid:
@@ -2250,7 +2244,6 @@ def bot(op):
                         kn.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G.preventJoinByTicket = True
                         kf.updateGroup(G)
-                        pass
                         wait["blacklist"][op.param2] = True
 
                 elif op.param3 in Fmid:
@@ -2295,7 +2288,6 @@ def bot(op):
                         kn.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G.preventJoinByTicket = True
                         kg.updateGroup(G)
-                        pass
                         wait["blacklist"][op.param2] = True
 
                 elif op.param3 in Gmid:
@@ -2340,7 +2332,6 @@ def bot(op):
                         kn.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G.preventJoinByTicket = True
                         kh.updateGroup(G)
-                        pass
                         wait["blacklist"][op.param2] = True
 
                 elif op.param3 in Hmid:
@@ -2385,7 +2376,6 @@ def bot(op):
                         kn.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G.preventJoinByTicket = True
                         ki.updateGroup(G)
-                        pass
                         wait["blacklist"][op.param2] = True
 
                 elif op.param3 in Jmid:
@@ -2430,7 +2420,6 @@ def bot(op):
                         kn.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G.preventJoinByTicket = True
                         kn.updateGroup(G)
-                        pass
                         wait["blacklist"][op.param2] = True
 
                 elif op.param3 in Lmid:
@@ -2475,7 +2464,6 @@ def bot(op):
                         kn.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G.preventJoinByTicket = True
                         kn.updateGroup(G)
-                        pass
                         wait["blacklist"][op.param2] = True
 
                 elif op.param3 in Nmid:
@@ -2520,7 +2508,6 @@ def bot(op):
                         kn.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G.preventJoinByTicket = True
                         kh.updateGroup(G)
-                        pass
                         wait["blacklist"][op.param2] = True
 
                 elif op.param3 in admid:
@@ -2565,12 +2552,10 @@ def bot(op):
                         kn.acceptGroupInvitationByTicket(op.param1,Ticket)
                         G.preventJoinByTicket = True
                         kk.updateGroup(G)
-                        pass
                         wait["blacklist"][op.param2] = True
 
             except:
                 pass
-                wait["blacklist"][op.param2] = True
 
 #----------------------------------------------------------------------------------
 #-----------------------------------------------------
