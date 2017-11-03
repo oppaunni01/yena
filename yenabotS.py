@@ -1620,6 +1620,24 @@ def bot(op):
                 elapsed_time = time.time() - start
                 cl.sendText(msg.to, "%sseconds" % (elapsed_time))
 #------------------------------------------------------------------
+            elif "Spam " in msg.text:
+              if msg.from_ in Bots or staff:
+                txt = msg.text.split(" ")
+                jmlh = int(txt[2])
+                teks = msg.text.replace("Spam "+str(txt[1])+" "+str(jmlh)+ " ","")
+                tulisan = jmlh * (teks+"\n")
+                 #Keke cantik <3
+                if txt[1] == "on":
+                    if jmlh <= 500:
+                       for x in range(jmlh):
+                           cl.sendText(msg.to, teks)
+                    else:
+                       cl.sendText(msg.to, "Kelebihan batas:v")
+                elif txt[1] == "off":
+                    if jmlh <= 999:
+                        cl.sendText(msg.to, tulisan)
+                    else:
+                        cl.sendText(msg.to, "Kelebihan batas :v")
             elif msg.text in ["Ban"]:
               if msg.from_ in admin:
                 wait["wblacklist"] = True
