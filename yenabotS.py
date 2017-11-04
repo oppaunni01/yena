@@ -1622,6 +1622,83 @@ def bot(op):
                 elapsed_time = time.time() - start
                 cl.sendText(msg.to, "%sseconds" % (elapsed_time))
 #------------------------------------------------------------------
+            elif "Mysteal @" in msg.text:
+                print "[Command]dp executing"
+                _name = msg.text.replace("Mysteal @","")
+                _nametarget = _name.rstrip(' ')
+                gs = cl.getGroup(msg.to)
+                targets = []
+                for g in gs.members:
+                    if _nametarget == g.displayName:
+                        targets.append(g.mid)
+                if targets == []:
+                    cl.sendText(msg.to,"Contact not found")
+                else:
+                    for target in targets:
+                        try:
+                            contact = cl.getContact(target)
+                            path = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
+                            cl.sendImageWithURL(msg.to, path)
+                        except:
+                            pass
+                print "[Command]dp executed"
+            elif "Mycopy @" in msg.text:
+                if msg.toType == 2:
+                    if msg.from_ in admin:
+                        print "[COPY] Ok"
+                        _name = msg.text.replace("Mycopy @","")
+                        _nametarget = _name.rstrip(' ')
+                        gs = cl.getGroup(msg.to)
+                        targets = []
+                        for g in gs.members:
+                            if _nametarget == g.displayName:
+                                targets.append(g.mid)
+                        if targets == []:
+                            cl.sendText(msg.to, "Not Found...")
+                        else:
+                            for target in targets:
+                                try:
+                                    cl.cloneContactProfile(target)
+                                    cl.sendText(msg.to, "Sukses Copy Profile")
+                                except Exception as e:
+                                    print e
+            elif "Copy @" in msg.text:
+                if msg.toType == 2:
+                    if msg.from_ in admin:
+                        print "[COPY] Ok"
+                        _name = msg.text.replace("Copy @","")
+                        _nametarget = _name.rstrip(' ')
+                        gs = cl.getGroup(msg.to)
+                        targets = []
+                        for g in gs.members:
+                            if _nametarget == g.displayName:
+                                targets.append(g.mid)
+                        if targets == []:
+                            cl.sendText(msg.to, "Tidak Ada Target Copy")
+                        else:
+                            for target in targets:
+                                try:
+                                    ad.cloneContactProfile(target)
+                                    ki.cloneContactProfile(target)
+                                    kk.cloneContactProfile(target)
+                                    kc.cloneContactProfile(target)
+                                    kd.cloneContactProfile(target)
+                                    ke.cloneContactProfile(target)
+                                    kf.cloneContactProfile(target)
+                                    kg.cloneContactProfile(target)
+                                    kh.cloneContactProfile(target)
+                                    kj.cloneContactProfile(target)
+                                    kl.cloneContactProfile(target)
+                                    kn.cloneContactProfile(target)
+                                except Exception as e:
+                                    print
+            elif msg.text in ["Mybackup"]:
+                try:
+                    cl.updateDisplayPicture(mybackup.pictureStatus)
+                    cl.updateProfile(mybackup)
+                    cl.sendText(msg.to, "Backup Sukses Bosqu")
+                except Exception as e:
+                    cl.sendText(msg.to, str (e))
             elif "Spam " in msg.text:
               if msg.from_ in Bots or staff:
                 txt = msg.text.split(" ")
@@ -2180,8 +2257,8 @@ def bot(op):
                          else:
                              for target in targets:
                                  try:
-                                     ki.findAndAddContactsByMid(target)
-                                     ki.inviteIntoGroup(msg.to,[target])
+                                     cl.findAndAddContactsByMid(target)
+                                     cl.inviteIntoGroup(msg.to,[target])
                                      random.choice(KAC).sendText(msg.to,"Invited this nigga💋: \n➡" + _name)
                                      wait2["ricoinvite"] = False
                                      break
