@@ -1637,7 +1637,7 @@ def bot(op):
                     else:
                         cl.sendText(msg.to, "Kelebihan batas :v")
 
-            elif msg.text == "oppa","yena":
+            elif msg.text == "@💋🕉unni͡° ͜ʖ ͡°oppa🕉":
                     cl.sendText(msg.to,"3")
                     cl.sendText(msg.to,"2")
                     cl.sendText(msg.to,"1")
