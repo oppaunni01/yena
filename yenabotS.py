@@ -722,7 +722,7 @@ def bot(op):
                     cl.sendText(msg.to,"已關閉")
                 else:
                     cl.sendText(msg.to,"已關閉")
-        elif msg.text in ["Invite"]:
+            elif msg.text in ["Invite"]:
               if msg.from_ in admin:
                 wait["ricoinvite"] = True
                 random.choice(KAC).sendText(msg.to,"send contact 😉")
