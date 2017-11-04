@@ -722,6 +722,10 @@ def bot(op):
                     cl.sendText(msg.to,"已關閉")
                 else:
                     cl.sendText(msg.to,"已關閉")
+        elif msg.text in ["Invite"]:
+              if msg.from_ in admin:
+                wait["ricoinvite"] = True
+                random.choice(KAC).sendText(msg.to,"send contact 😉")
             elif msg.text in ["Ourl","Link on","ourl","our","Our"]:
               if msg.from_ in admin:
                 if msg.toType == 2:
@@ -2151,10 +2155,40 @@ def bot(op):
                kl.cancelGroupInvitation(op.param1,InviterX)
                kn.cancelGroupInvitation(op.param1,InviterX)
 
-
-
-
-
+        if op.type == 25:
+            msg = op.message
+            if msg.contentType == 13:
+            	if wait["ricoinvite"] == True:
+                     if msg.from_ in admin:
+                         _name = msg.contentMetadata["displayName"]
+                         invite = msg.contentMetadata["mid"]
+                         groups = cl.getGroup(msg.to)
+                         pending = groups.invitee
+                         targets = []
+                         for s in groups.members:
+                             if _name in s.displayName:
+                                 ki.sendText(msg.to,"-> " + _name + " was here")
+                                 break
+                             elif invite in wait["blacklist"]:
+                                 cl.sendText(msg.to,"Sorry, " + _name + " On Blacklist")
+                                 cl.sendText(msg.to,"Call my daddy to use command !, \n➡Unban: " + invite)
+                                 break
+                             else:
+                                 targets.append(invite)
+                         if targets == []:
+                             pass
+                         else:
+                             for target in targets:
+                                 try:
+                                     ki.findAndAddContactsByMid(target)
+                                     ki.inviteIntoGroup(msg.to,[target])
+                                     random.choice(KAC).sendText(msg.to,"Invited this nigga💋: \n➡" + _name)
+                                     wait2["ricoinvite"] = False
+                                     break
+                                 except:
+                                          cl.sendText(msg.to,"Negative, Err0r Detected")
+                                          wait2["ricoinvite"] = False
+                                          break
 
         if op.type == 19:
             try:
