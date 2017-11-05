@@ -1623,7 +1623,6 @@ def bot(op):
                 elapsed_time = time.time() - start
                 cl.sendText(msg.to, "%sseconds" % (elapsed_time))
 #------------------------------------------------------------------
-
             elif "Spam " in msg.text:
               if msg.from_ in Bots or staff:
                 txt = msg.text.split(" ")
@@ -1642,7 +1641,6 @@ def bot(op):
                         cl.sendText(msg.to, tulisan)
                     else:
                         cl.sendText(msg.to, "Kelebihan batas :v")
-
             elif msg.text == "oppa":
                     cl.sendText(msg.to,"3")
                     cl.sendText(msg.to,"2")
@@ -2022,7 +2020,6 @@ def bot(op):
                     for jj in matched_list:
                         cl.kickoutFromGroup(msg.to,[jj])
                     cl.sendText(msg.to,"黑單勿近")
-
         if op.type == 13:
             if mid in op.param3:
                 if wait["autoJoin"] == True:
