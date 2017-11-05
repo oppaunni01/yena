@@ -57,7 +57,6 @@ k3 = LINETCR.LINE()
 k3.login(token="Emo8jkBt0e5fN8mhFGV0.X7ONBO4L4YtA49fO3i6lua.rf/vE75ylcqQtXyUulC6qIXHtvSncihztK3n/v9r3vM=")
 k3.loginResult()
 
-
 print u"login success"
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -96,7 +95,7 @@ helpMessage ="""||=====  F O R   U S E R  =====||
 ||��✒ Kick @        - Via Tag
 ||��✒ Kick:         - Via MID
 ||===== F O R  P L A Y E R =====||
-||��✒ Bc:ct 
+||��✒ Bc:ct
 ||��✒ Bc:grup
 ||��✒ Block @
 ||��✒ Blocklist
