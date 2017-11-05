@@ -1854,7 +1854,7 @@ def bot(op):
                     except:
                         cl.sendText(msg.to,"Mungkin saya tidak di dalaam grup itu")
 
-            elif msg.text in ["Clear grup"]:
+            elif msg.text in ["Clear group"]:
               if msg.from_ in admin:
                 gid = cl.getGroupIdsJoined()
                 gid = ki.getGroupIdsJoined()
@@ -1883,10 +1883,9 @@ def bot(op):
                     k2.leaveGroup(i)
                     k3.leaveGroup(i)
                 if wait["lang"] == "JP":
-                    cl.sendText(msg.to,"Bot Sudah Keluar Di semua grup")
+                    cl.sendText(msg.to,"Bot Sudah Keluar Di semua pah")
                 else:
                     cl.sendText(msg.to,"He declined all invitations")
-
             elif msg.text == "Ginfo":
                     group = cl.getGroup(msg.to)
                     try:
