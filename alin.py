@@ -248,6 +248,7 @@ def bot(op):
                     pass
                 else:
                     cl.cancelGroupInvitation(op.param1, matched_list)
+
         if op.type == 19:
             if mid in op.param3:
                 wait["blacklist"][op.param2] = True
@@ -2156,17 +2157,10 @@ def bot(op):
 #-----------------------------------------------------------
             elif msg.text in ["Bot sp","Bot speed"]:
                 start = time.time()
-                ki.sendText(msg.to, "Mohon Bersabar Ini Gratisan...")
+                cl.sendText(msg.to, "Mohon Bersabar Ini Gratisan...")
                 elapsed_time = time.time() - start
-                ki.sendText(msg.to, "%sseconds" % (elapsed_time))
+                cl.sendText(msg.to, "%sseconds" % (elapsed_time))
                 elapsed_time = time.time() - start
-                ki2.sendText(msg.to, "%sseconds" % (elapsed_time))
-                elapsed_time = time.time() - start
-                ki3.sendText(msg.to, "%sseconds" % (elapsed_time))
-                elapsed_time = time.time() - start
-                ki4.sendText(msg.to, "%sseconds" % (elapsed_time))
-                elapsed_time = time.time() - start
-
             elif msg.text.lower() == 'responsname':
                 profile = ki.getProfile()
                 text = profile.displayName
@@ -2180,12 +2174,35 @@ def bot(op):
                 profile = ki4.getProfile()
                 text = profile.displayName
                 ki4.sendText(msg.to, text)
-
+                profile = ki5.getProfile()
+                text = profile.displayName
+                ki5.sendText(msg.to, text)
+                profile = ki6.getProfile()
+                text = profile.displayName
+                ki6.sendText(msg.to, text)
+                profile = ki7.getProfile()
+                text = profile.displayName
+                ki7.sendText(msg.to, text)
+                profile = ki8.getProfile()
+                text = profile.displayName
+                ki8.sendText(msg.to, text)
+                profile = ki9.getProfile()
+                text = profile.displayName
+                ki9.sendText(msg.to, text)
+                profile = k1.getProfile()
+                text = profile.displayName
+                k1.sendText(msg.to, text)
+                profile = k2.getProfile()
+                text = profile.displayName
+                k2.sendText(msg.to, text)
+                profile = k3.getProfile()
+                text = profile.displayName
+                k3.sendText(msg.to, text)
 #------------------------------------------------------------------
             elif "Steal home @" in msg.text:
                 print "[Command]dp executing"
                 _name = msg.text.replace("Steal home @","")
-                _nametarget = _name.rstrip('  ')
+                _nametarget = _name.rstrip(' ')
                 gs = cl.getGroup(msg.to)
                 targets = []
                 for g in gs.members:
@@ -2451,7 +2468,33 @@ def bot(op):
                         random.choice(KAC).updateGroup(G)
 
 #-----------------------------------------------
-            elif msg.text in ["Yekam","Yenacam"]:
+            elif msg.text in ["Sljoin"]:
+                if msg.from_ in admin:
+                    G = cl.getGroup(msg.to)
+                    G.preventJoinByTicket = False
+                    cl.updateGroup(G)
+                    print "EXECUTED -- SUMMON BOT"
+                    invsend = 0
+                    Ticket = cl.reissueGroupTicket(msg.to)
+                    cl.sendText(msg.to,"Bye Bye😘 "  +  str(ginfo.name)  + "")
+                    ki.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    ki2.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    ki3.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    ki4.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    ki5.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    ki6.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    ki7.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    ki8.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    ki9.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    k1.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    k2.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    k3.acceptGroupInvitationByTicket(msg.to,Ticket)
+                    G = kn.getGroup(msg.to)
+                    G.preventJoinByTicket = True
+                    kn.updateGroup(G)
+                    print "SUKSES -- SUMMON BOT"
+                    G.preventJoinByTicket(G)
+            elif msg.text in ["Ymjoin"]:
                 if msg.from_ in admsa:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
@@ -2709,7 +2752,29 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         k3.updateGroup(G)
 #-----------------------------------------------
-            elif msg.text in ["Byemah","Yenabye"]:
+            elif msg.text in ["mambye"]:
+              if msg.from_ in admin:
+                    ginfo = cl.getGroup(msg.to)
+                    print "EXECUTED -- BOT OUT GROUP"
+                    try:
+                        cl.sendText(msg.to,"Bye Bye😘 "  +  str(ginfo.name)  + "")
+                        ki.leaveGroup(msg.to)
+                        ki2.leaveGroup(msg.to)
+                        ki3.leaveGroup(msg.to)
+                        ki4.leaveGroup(msg.to)
+                        ki5.leaveGroup(msg.to)
+                        ki6.leaveGroup(msg.to)
+                        ki7.leaveGroup(msg.to)
+                        ki8.leaveGroup(msg.to)
+                        ki9.leaveGroup(msg.to)
+                        k1.leaveGroup(msg.to)
+                        k2.leaveGroup(msg.to)
+                        k3.leaveGroup(msg.to)
+                        print "SUKSES -- BOT OUT GROUP"
+                    except:
+                        pass
+
+            elif msg.text in ["Byemah"]:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -3690,6 +3755,50 @@ def bot(op):
 		    random.choice(KAC).sendText(op.param1,"Welcome. Don't Play Bots. I can kick you!")
 	    else:
 		pass
+
+        if op.type == 13:
+            if mid in op.param3:
+                if wait["autoJoin"] == True:
+                    cl.acceptGroupInvitation(op.param1)
+                    print "BOT 1 Joined"
+                    G = cl.getGroup(op.param1)
+                    G.preventJoinByTicket = False
+                    cl.updateGroup(G)
+                    Ticket = cl.reissueGroupTicket(op.param1)
+                    ki.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    ki2.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    ki3.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    ki4.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    ki5.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    ki6.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    ki7.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    ki8.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    ki9.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    k1.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    k2.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    k3.acceptGroupInvitationByTicket(op.param1,Ticket)
+                    cl.sendText(op.param1, "進入成功.")
+                    G.preventJoinByTicket = True
+                    kn.updateGroup(G)
+                    print "all join"
+        else:
+                if cancelinvite["autoCancel"] == True:
+                    try:
+                        X = cl.getGroup(op.param1)
+                        gInviMids = [contact.mid for contact in X.invitee]
+                        cl.cancelGroupInvitation(op.param1, gInviMids)
+                        print gInviMids + "invite canceled"
+                    except:
+                        try:
+                            print "Retry canceling invitation"
+                            X = random.choice(KAC).getGroup(op.param1)
+                            gInviMids = [contact.mid for contact in X.invitee]
+                            random.choice(KAC).cancelGroupInvitation(op.param1, gInviMids)
+                            print gInviMids + "invite canceled"
+                        except:
+                            print "Bot can't cancel the invitation"
+                            pass
+
 	if op.type == 19:
 	    if op.param2 not in Bots:
 		if op.param2 in Bots:
