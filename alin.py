@@ -1366,7 +1366,26 @@ def bot(op):
                             cl.kickoutFromGroup(msg.to,[target])
                         except:
                             cl.sendText(msg.to,"Error")
-
+            elif "Mid @" in msg.text:
+                _name = msg.text.replace("Mid @","")
+                _nametarget = _name.rstrip(' ')
+                gs = cl.getGroup(msg.to)
+                for g in gs.members:
+                    if _nametarget == g.displayName:
+                        cl.sendText(msg.to, g.mid)
+                    else:
+                        pass
+            elif "Me @" in msg.text:
+                msg.contentType = 13
+                _name = msg.text.replace("Me @","")
+                _nametarget = _name.rstrip(' ')
+                gs = cl.getGroup(msg.to)
+                for g in gs.members:
+                    if _nametarget == g.displayName:
+                        msg.contentMetadata = {'mid': g.mid}
+                        cl.sendMessage(msg)
+                    else:
+                        pass
             elif "Mention" in msg.text:
                 group = cl.getGroup(msg.to)
                 k = len(group.members)//100
@@ -1972,18 +1991,6 @@ def bot(op):
                    key1 = key["MENTIONEES"][0]["M"]
                    mi = cl.getContact(key1)
                    cl.sendText(msg.to,"Mid:" +  key1)
-
-            elif "Mid @" in msg.text:
-              if msg.from_ in admin:
-                _name = msg.text.replace("Mid @","")
-                _nametarget = _name.rstrip(' ')
-                gs = cl.getGroup(msg.to)
-                for g in gs.members:
-                    if _nametarget == g.displayName:
-                        ki.sendText(msg.to, g.mid)
-                    else:
-                        pass
-
             elif "Mymid" == msg.text:
                 cl.sendText(msg.to,mid)
 
@@ -2468,7 +2475,7 @@ def bot(op):
                         random.choice(KAC).updateGroup(G)
 
 #-----------------------------------------------
-            elif msg.text in ["Sljoin"]:
+            elif msg.text in ["ycam","yenacam"]:
                 if msg.from_ in admin:
                     G = cl.getGroup(msg.to)
                     G.preventJoinByTicket = False
@@ -2476,7 +2483,7 @@ def bot(op):
                     print "EXECUTED -- SUMMON BOT"
                     invsend = 0
                     Ticket = cl.reissueGroupTicket(msg.to)
-                    cl.sendText(msg.to,"Bye Bye😘 "  +  str(ginfo.name)  + "")
+                    cl.sendText(msg.to,"Cam-Cam😘 "  +  str(ginfo.name)  + "")
                     ki.acceptGroupInvitationByTicket(msg.to,Ticket)
                     ki2.acceptGroupInvitationByTicket(msg.to,Ticket)
                     ki3.acceptGroupInvitationByTicket(msg.to,Ticket)
