@@ -25,7 +25,7 @@ ki4 = LINETCR.LINE()
 ki4.login(token="EmrrPMkJ4xvAx2YX1GY6.xkaL7HAdfdzB4bRIIC04jG.n1mU4HZHByC4jO/ThwUNwq5wMjjJzz4nq4s9zAsLRuk=")
 ki4.loginResult()
 
-ki5 = LINETCR.LINR()
+ki5 = LINETCR.LINE()
 ki5.login(token="EmvQ8lL3iQ3xbpdJ9t0c.aYbkAqXV5gf9Eu4MbqlVBa.gNoJ1W7dOQAdGVPsSIwjYPzfnWdBPJrmtDqUNdSHrIE=")
 ki5.loginResult()
 
