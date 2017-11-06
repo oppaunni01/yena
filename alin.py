@@ -290,7 +290,7 @@ def bot(op):
                          targets = []
                          for s in groups.members:
                              if _name in s.displayName:
-                                 ki.sendText(msg.to,"-> " + _name + " was here")
+                                 cl.sendText(msg.to,"-> " + _name + " was here")
                                  break
                              elif invite in wait["blacklist"]:
                                  cl.sendText(msg.to,"Sorry, " + _name + " On Blacklist")
@@ -303,8 +303,8 @@ def bot(op):
                          else:
                              for target in targets:
                                  try:
-                                     ki.findAndAddContactsByMid(target)
-                                     ki.inviteIntoGroup(msg.to,[target])
+                                     cl.findAndAddContactsByMid(target)
+                                     cl.inviteIntoGroup(msg.to,[target])
                                      random.choice(KAC).sendText(msg.to,"Invited this nigga💋: \n➡" + _name)
                                      wait2["ricoinvite"] = False
                                      break
@@ -1402,7 +1402,7 @@ def bot(op):
                     msg.contentMetadata = {u'MENTION':json.dumps({"MENTIONEES":d})}
                     cl.sendMessage(msg)
 
-            elif "Ratakan" in msg.text:
+            elif "xxx:" in msg.text:
                   if msg.from_ in admin:
                        nk0 = msg.text.replace("Ratakan","")
                        nk1 = nk0.lstrip()
@@ -1873,7 +1873,8 @@ def bot(op):
                     except:
                         cl.sendText(msg.to,"Mungkin saya tidak di dalaam grup itu")
 
-            elif msg.text in ["Clear group"]:
+
+            elif msg.text in ["Clear room"]:
               if msg.from_ in admin:
                 gid = cl.getGroupIdsJoined()
                 gid = ki.getGroupIdsJoined()
@@ -1902,7 +1903,7 @@ def bot(op):
                     k2.leaveGroup(i)
                     k3.leaveGroup(i)
                 if wait["lang"] == "JP":
-                    cl.sendText(msg.to,"Bot Sudah Keluar Di semua pah")
+                    cl.sendText(msg.to,"Bot leave all room:done")
                 else:
                     cl.sendText(msg.to,"He declined all invitations")
             elif msg.text == "Ginfo":
@@ -1984,7 +1985,8 @@ def bot(op):
             elif msg.text in ["Invite"]:
               if msg.from_ in admin:
                 wait["ricoinvite"] = True
-                random.choice(KAC).sendText(msg.to,"send contact 😉")
+                cl.sendText(msg.to, "send contact 😉")
+#                random.choice(KAC).sendText(msg.to,"send contact 😉")
 
             elif ("Cek " in msg.text):
                    key = eval(msg.contentMetadata["MENTION"])
@@ -2413,7 +2415,7 @@ def bot(op):
                             print (msg.to,[jj])
                         except:
                             pass
-            elif "Nuke" in msg.text:
+            elif ":xxx" in msg.text:
               if msg.from_ in admin:
                 if msg.toType == 2:
                     print "ok"
@@ -2509,36 +2511,38 @@ def bot(op):
                         cl.updateGroup(G)
                         invsend = 0
                         Ticket = cl.reissueGroupTicket(msg.to)
+                        cl.sendText(msg.to,"Cam-Cam😘 "  +  str(ginfo.name)  + "")
                         ki.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
+#                        time.sleep(0.2)
                         ki2.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
+  #                      time.sleep(0.2)
                         ki3.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
+#                        time.sleep(0.2)
                         ki4.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
+ #                       time.sleep(0.2)
                         ki5.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
+  #                      time.sleep(0.2)
                         ki6.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
+   #                     time.sleep(0.2)
                         ki7.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
+    #                    time.sleep(0.2)
                         ki8.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
+     #                   time.sleep(0.2)
                         ki9.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
+      #                  time.sleep(0.2)
                         k1.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
+       #                 time.sleep(0.2)
                         k2.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
+        #                time.sleep(0.2)
                         k3.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.2)
+         #               time.sleep(0.2)
                         G = cl.getGroup(msg.to)
                         G.preventJoinByTicket = True
                         ki.updateGroup(G)
                         print "kicker ok"
                         G.preventJoinByTicket(G)
                         ki.updateGroup(G)
+
 
             elif msg.text.lower() == 'Sp come':
                         G = cl.getGroup(msg.to)
