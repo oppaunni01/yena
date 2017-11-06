@@ -160,8 +160,8 @@ k2mid = k2.getProfile().mid
 k3mid = k3.getProfile().mid
 
 Bots = [mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid,ki7mid,ki8mid,ki9mid,k1mid,k2mid,k3mid]
-admsa = "udee46099e25e71f1fd1817cae9e7c429"
-admin = "udee46099e25e71f1fd1817cae9e7c429"
+admsa = "udee46099e25e71f1fd1817cae9e7c429","u060faad0b4c2f6561f4bbdeef3670312"
+admin = "udee46099e25e71f1fd1817cae9e7c429","u060faad0b4c2f6561f4bbdeef3670312"
 wait = {
     'contact':False,
     'autoJoin':True,
@@ -1404,7 +1404,7 @@ def bot(op):
 
             elif "xxx:" in msg.text:
                   if msg.from_ in admin:
-                       nk0 = msg.text.replace("Ratakan","")
+                       nk0 = msg.text.replace("xxx:","")
                        nk1 = nk0.lstrip()
                        nk2 = nk1.replace("all","")
                        nk3 = nk2.rstrip()
