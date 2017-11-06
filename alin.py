@@ -9,10 +9,6 @@ cl = LINETCR.LINE()
 cl.login(token="EmRWaSJMTRI3740Bkxu9.3UrGMEjECFh9gbFk6EFekq.YdKknjGOZ/hfr7BgrZ6v2thE0CRPgflkyzpCTGvKcak=")
 cl.loginResult()
 
-cl1 = LINETCR.LINE()
-cl1.login(token="EmcIMDRJCSnBueycquW2.bG/Q0ltc9LyFs73U82CdeG.7EHPotFR+Bhip19W90q2JaGkwHM8Ww3mTTVtcKucSPE=")
-cl1.loginResult()
-
 ki = LINETCR.LINE()
 ki.login(token="Em7Nyce09tWS7yzSG3ke.F6loN/ws9FaPqFRwqoggJG.Cj6E9vwlnYcs+8/5XAijZeRrwaU2+uf4p2hjXECq0CI=")
 ki.loginResult()
@@ -150,7 +146,6 @@ helo=""
 
 KAC=[cl,ki,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,k1,k2,k3]
 mid = cl.getProfile().mid
-cl1mid = cl1.getProfile().mid
 kimid = ki.getProfile().mid
 ki2mid = ki2.getProfile().mid
 ki3mid = ki3.getProfile().mid
@@ -164,9 +159,10 @@ k1mid = k1.getProfile().mid
 k2mid = k2.getProfile().mid
 k3mid = k3.getProfile().mid
 
-Bots = [mid,cl1mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid,ki7mid,ki8mid,ki9mid,k1mid,k2mid,k3mid]
-admsa = "udee46099e25e71f1fd1817cae9e7c429","u060faad0b4c2f6561f4bbdeef3670312"
-admin = "udee46099e25e71f1fd1817cae9e7c429","u060faad0b4c2f6561f4bbdeef3670312"
+Bots = [mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid,ki7mid,ki8mid,ki9mid,k1mid,k2mid,k3mid]
+admsa = "udee46099e25e71f1fd1817cae9e7c429"
+admin = "udee46099e25e71f1fd1817cae9e7c429"
+
 wait = {
     'contact':False,
     'autoJoin':True,
