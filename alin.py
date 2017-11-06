@@ -2462,12 +2462,13 @@ def bot(op):
                         cl.updateGroup(G)
                         invsend = 0
                         Ticket = cl.reissueGroupTicket(msg.to)
+                        cl.sendText(msg.to,"Cam-Cam😘 "  +  str(ginfo.name)  + "")
                         ki.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.01)
+#                        time.sleep(0.01)
                         ki2.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.01)
+ #                       time.sleep(0.01)
                         ki3.acceptGroupInvitationByTicket(msg.to,Ticket)
-                        time.sleep(0.01)
+  #                      time.sleep(0.01)
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = True
@@ -2476,8 +2477,9 @@ def bot(op):
                         G.preventJoinByTicket(G)
                         random.choice(KAC).updateGroup(G)
 
+
 #-----------------------------------------------
-            elif msg.text in ["ycam","yenacam"]:
+            elif msg.text in ["ycam"]:
                 if msg.from_ in admin:
                     G = cl.getGroup(msg.to)
                     G.preventJoinByTicket = False
@@ -2503,7 +2505,7 @@ def bot(op):
                     kn.updateGroup(G)
                     print "SUKSES -- SUMMON BOT"
                     G.preventJoinByTicket(G)
-            elif msg.text in ["Ymjoin"]:
+            elif msg.text in ["Yenacam"]:
                 if msg.from_ in admsa:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
