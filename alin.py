@@ -150,7 +150,7 @@ helo=""
 
 KAC=[cl,ki,ki2,ki3,ki4,ki5,ki6,ki7,ki8,ki9,k1,k2,k3]
 mid = cl.getProfile().mid
-cl1mid = ad.getprofile().mid
+cl1mid = cl1.getprofile().mid
 kimid = ki.getProfile().mid
 ki2mid = ki2.getProfile().mid
 ki3mid = ki3.getProfile().mid
