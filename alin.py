@@ -932,7 +932,7 @@ def bot(op):
                         cl.sendText(msg.to,"Protect QR off 􀜁􀇔􏿿")
                     else:
                         cl.sendText(msg.to,"Already off")
-            elif msg.text.lower() == 'auto join off','ajoin off':
+            elif msg.text.lower() == 'auto join off':
                 if wait["autoJoin"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Auto Join Already Off")
