@@ -1367,20 +1367,6 @@ def bot(op):
                             cl.kickoutFromGroup(msg.to,[target])
                         except:
                             cl.sendText(msg.to,"Error")
-
-            elif "Vk " in msg.text:
-              if msg.from_ in admin:
-                key = eval(msg.contentMetadata["MENTION"])
-                key["MENTIONEES"][0]["M"]
-                targets = []
-                for x in key["MENTIONEES"]:
-                    targets.append(x["M"])
-                for target in targets:
-                   try:
-                      cl.kickoutFromGroup(msg.to,[target])
-                   except:
-                      pass
-
             elif "Mid @" in msg.text:
                 _name = msg.text.replace("Mid @","")
                 _nametarget = _name.rstrip(' ')
