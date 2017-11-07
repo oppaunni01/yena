@@ -788,7 +788,7 @@ def bot(op):
                         cl.sendText(msg.to,"off ô€œô€„‰already")
                     else:
                         cl.sendText(msg.to,"already Close ô€œô€„‰👈")
-            elif msg.text.lower() == 'protect on','pro on':
+            elif msg.text.lower() == 'protect on':
                 if wait["protect"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Ini sudah on 􀜁􀇔􏿿👈")
@@ -800,7 +800,7 @@ def bot(op):
                         cl.sendText(msg.to,"already ON􀜁􀇔􏿿")
                     else:
                         cl.sendText(msg.to,"It is already On ô€¨")
-            elif msg.text.lower() == 'qrprotect on','qrpro on':
+            elif msg.text.lower() == 'qrprotect on':
                 if wait["linkprotect"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Ini sudah on 􀜁􀇔��👈")
@@ -812,7 +812,7 @@ def bot(op):
                         cl.sendText(msg.to,"already ON􀜁􀇔􏿿")
                     else:
                         cl.sendText(msg.to,"It is already On ô€¨")
-            elif msg.text.lower() == 'inviteprotect on','invpro on':
+            elif msg.text.lower() == 'inviteprotect on':
                 if wait["inviteprotect"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Ini sudah on 􀜁􀇔􏿿👈")
@@ -824,7 +824,7 @@ def bot(op):
                         cl.sendText(msg.to,"already ON􀜁􀇔􏿿")
                     else:
                         cl.sendText(msg.to,"It is already On ô€¨")
-            elif msg.text.lower() == 'cancelprotect on','cancelpro':
+            elif msg.text.lower() == 'cancelprotect on':
                 if wait["cancelprotect"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Ini sudah on 􀜁􀇔􏿿👈")
@@ -836,7 +836,7 @@ def bot(op):
                         cl.sendText(msg.to,"already ON􀜁􀇔􏿿")
                     else:
                         cl.sendText(msg.to,"It is already On ô€¨")
-            elif msg.text.lower() == 'auto join on','ajoin on':
+            elif msg.text.lower() == 'auto join on':
                 if wait["autoJoin"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Ini sudah off 􀜁􀇔􏿿👈")
@@ -944,7 +944,7 @@ def bot(op):
                         cl.sendText(msg.to,"already close")
                     else:
                         cl.sendText(msg.to,"It is already open ô€œ👈")
-            elif msg.text in ["Protect off","pro off"]:
+            elif msg.text in ["Protect off"]:
                 if wait["protect"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"hall ini sudah off ô€œ👈")
@@ -956,7 +956,7 @@ def bot(op):
                         cl.sendText(msg.to,"already close")
                     else:
                         cl.sendText(msg.to,"It is already open ô€œ👈")
-            elif msg.text in ["Qrprotect off","qrprotect off","qrpro off"]:
+            elif msg.text in ["Qrprotect off","qrprotect off"]:
                 if wait["linkprotect"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"hall ini sudah off ô€œ👈")
@@ -968,7 +968,7 @@ def bot(op):
                         cl.sendText(msg.to,"already close")
                     else:
                         cl.sendText(msg.to,"It is already open ô€œ👈")
-            elif msg.text in ["Inviteprotect off","invpro off"]:
+            elif msg.text in ["Inviteprotect off"]:
                 if wait["inviteprotect"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"hall ini sudah off ô€œ👈")
@@ -980,7 +980,7 @@ def bot(op):
                         cl.sendText(msg.to,"already close")
                     else:
                         cl.sendText(msg.to,"It is already open ô€œ👈")
-            elif msg.text in ["Cancelprotect off","cancelpro off"]:
+            elif msg.text in ["Cancelprotect off"]:
                 if wait["cancelprotect"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"hall ini sudah off ô€œ👈")
