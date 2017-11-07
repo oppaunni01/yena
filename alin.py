@@ -1355,7 +1355,7 @@ def bot(op):
 #-----------------------------------------------------------)
 #----------------------ADMIN COMMAND------------------------------#
 
-            elif "Bye " in msg.text):
+            elif "Kick " in msg.text):
                 if msg.from_ in admin:
                     targets = []
                     key = eval(msg.contentMetadata["MENTION"])
