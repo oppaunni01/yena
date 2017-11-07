@@ -788,7 +788,7 @@ def bot(op):
                         cl.sendText(msg.to,"off ô€œô€„‰already")
                     else:
                         cl.sendText(msg.to,"already Close ô€œô€„‰👈")
-            elif msg.text.lower() == 'protect on':
+            elif msg.text.lower() == 'protect on','pro on':
                 if wait["protect"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Ini sudah on 􀜁􀇔􏿿👈")
@@ -800,7 +800,7 @@ def bot(op):
                         cl.sendText(msg.to,"already ON􀜁􀇔􏿿")
                     else:
                         cl.sendText(msg.to,"It is already On ô€¨")
-            elif msg.text.lower() == 'qrprotect on':
+            elif msg.text.lower() == 'qrprotect on','qrpro on':
                 if wait["linkprotect"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Ini sudah on 􀜁􀇔��👈")
@@ -812,7 +812,7 @@ def bot(op):
                         cl.sendText(msg.to,"already ON􀜁􀇔􏿿")
                     else:
                         cl.sendText(msg.to,"It is already On ô€¨")
-            elif msg.text.lower() == 'inviteprotect on':
+            elif msg.text.lower() == 'inviteprotect on','invpro on':
                 if wait["inviteprotect"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Ini sudah on 􀜁􀇔􏿿👈")
@@ -824,7 +824,7 @@ def bot(op):
                         cl.sendText(msg.to,"already ON􀜁􀇔􏿿")
                     else:
                         cl.sendText(msg.to,"It is already On ô€¨")
-            elif msg.text.lower() == 'cancelprotect on':
+            elif msg.text.lower() == 'cancelprotect on','cancelpro':
                 if wait["cancelprotect"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Ini sudah on 􀜁􀇔􏿿👈")
@@ -836,7 +836,7 @@ def bot(op):
                         cl.sendText(msg.to,"already ON􀜁􀇔􏿿")
                     else:
                         cl.sendText(msg.to,"It is already On ô€¨")
-            elif msg.text.lower() == 'auto join on':
+            elif msg.text.lower() == 'auto join on','ajoin on':
                 if wait["autoJoin"] == True:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Ini sudah off 􀜁􀇔􏿿👈")
@@ -932,7 +932,7 @@ def bot(op):
                         cl.sendText(msg.to,"Protect QR off 􀜁􀇔􏿿")
                     else:
                         cl.sendText(msg.to,"Already off")
-            elif msg.text.lower() == 'auto join off':
+            elif msg.text.lower() == 'auto join off','ajoin off':
                 if wait["autoJoin"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Auto Join Already Off")
@@ -944,7 +944,7 @@ def bot(op):
                         cl.sendText(msg.to,"already close")
                     else:
                         cl.sendText(msg.to,"It is already open ô€œ👈")
-            elif msg.text in ["Protect off"]:
+            elif msg.text in ["Protect off","pro off"]:
                 if wait["protect"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"hall ini sudah off ô€œ👈")
@@ -956,7 +956,7 @@ def bot(op):
                         cl.sendText(msg.to,"already close")
                     else:
                         cl.sendText(msg.to,"It is already open ô€œ👈")
-            elif msg.text in ["Qrprotect off","qrprotect off"]:
+            elif msg.text in ["Qrprotect off","qrprotect off","qrpro off"]:
                 if wait["linkprotect"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"hall ini sudah off ô€œ👈")
@@ -968,7 +968,7 @@ def bot(op):
                         cl.sendText(msg.to,"already close")
                     else:
                         cl.sendText(msg.to,"It is already open ô€œ👈")
-            elif msg.text in ["Inviteprotect off"]:
+            elif msg.text in ["Inviteprotect off","invpro off"]:
                 if wait["inviteprotect"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"hall ini sudah off ô€œ👈")
@@ -980,7 +980,7 @@ def bot(op):
                         cl.sendText(msg.to,"already close")
                     else:
                         cl.sendText(msg.to,"It is already open ô€œ👈")
-            elif msg.text in ["Cancelprotect off"]:
+            elif msg.text in ["Cancelprotect off","cancelpro off"]:
                 if wait["cancelprotect"] == False:
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"hall ini sudah off ô€œ👈")
@@ -1355,7 +1355,7 @@ def bot(op):
 #-----------------------------------------------------------)
 #----------------------ADMIN COMMAND------------------------------#
 
-            elif "Kick " in msg.text:
+            elif "bye " in msg.text:
                 if msg.from_ in admin:
                     targets = []
                     key = eval(msg.contentMetadata["MENTION"])
@@ -1367,6 +1367,19 @@ def bot(op):
                             cl.kickoutFromGroup(msg.to,[target])
                         except:
                             cl.sendText(msg.to,"Error")
+
+            elif "pay " in msg.text:
+              if msg.from_ in admin:
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      cl.kickoutFromGroup(msg.to,[target])
+                   except:
+                      pass
             elif "Mid @" in msg.text:
                 _name = msg.text.replace("Mid @","")
                 _nametarget = _name.rstrip(' ')
