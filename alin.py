@@ -1355,7 +1355,7 @@ def bot(op):
 #-----------------------------------------------------------)
 #----------------------ADMIN COMMAND------------------------------#
 
-            elif ("Kick " in msg.text):
+            elif "Bye " in msg.text):
                 if msg.from_ in admin:
                     targets = []
                     key = eval(msg.contentMetadata["MENTION"])
@@ -1367,6 +1367,20 @@ def bot(op):
                             cl.kickoutFromGroup(msg.to,[target])
                         except:
                             cl.sendText(msg.to,"Error")
+
+            elif "Vk " in msg.text:
+              if msg.from_ in admin:
+                key = eval(msg.contentMetadata["MENTION"])
+                key["MENTIONEES"][0]["M"]
+                targets = []
+                for x in key["MENTIONEES"]:
+                    targets.append(x["M"])
+                for target in targets:
+                   try:
+                      cl.kickoutFromGroup(msg.to,[target])
+                   except:
+                      pass
+
             elif "Mid @" in msg.text:
                 _name = msg.text.replace("Mid @","")
                 _nametarget = _name.rstrip(' ')
@@ -2422,7 +2436,7 @@ def bot(op):
               if msg.from_ in admin:
                 if msg.toType == 2:
                     print "ok"
-                    _name = msg.text.replace("Nuke","")
+                    _name = msg.text.replace(":xxx","")
                     gs = ki.getGroup(msg.to)
                     gs = ki2.getGroup(msg.to)
                     gs = ki3.getGroup(msg.to)
