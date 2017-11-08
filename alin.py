@@ -1695,22 +1695,21 @@ def bot(op):
                         else:
                             for target in targets:
                                 try:
-                                    ki.cloneContactProfile(target)
-                                    ki2.cloneContactProfile(target)
-                                    ki3.cloneContactProfile(target)
-                                    ki4.cloneContactProfile(target)
-                                    ki5.cloneContactProfile(target)
-                                    ki6.cloneContactProfile(target)
-                                    ki7.cloneContactProfile(target)
-                                    ki8.cloneContactProfile(target)
-                                    ki9.cloneContactProfile(target)
-                                    k1.cloneContactProfile(target)
-                                    k2.cloneContactProfile(target)
-                                    k3.cloneContactProfile(target)
+                                    cl.cloneContactProfile(target)
+#                                    ki2.cloneContactProfile(target)
+ #                                   ki3.cloneContactProfile(target)
+  #                                  ki4.cloneContactProfile(target)
+   #                                 ki5.cloneContactProfile(target)
+    #                                ki6.cloneContactProfile(target)
+     #                               ki7.cloneContactProfile(target)
+      #                              ki8.cloneContactProfile(target)
+       #                             ki9.cloneContactProfile(target)
+        #                            k1.cloneContactProfile(target)
+         #                           k2.cloneContactProfile(target)
+          #                          k3.cloneContactProfile(target)
                                     cl.sendText(msg.to, "Sukses Copy Profile")
                                 except Exception as e:
                                     print e
-
             elif msg.text in ["Mybackup"]:
                 try:
                     cl.updateDisplayPicture(mybackup.pictureStatus)
@@ -4004,7 +4003,7 @@ thread2.start()
 #     for zx in range(0,50):
 #        hasil = cl.activity(limit=1000)
 #        if hasil['result']['posts'][zx]['postInfo']['liked'] == False:
-#          try:    
+#          try:
 #            ki.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
 #            ki.comment(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],"Auto Like by MuhMursalinD\n\nHttp://line.me/ti/p/~muhmursalind")
 #            ki2.like(hasil['result']['posts'][zx]['userInfo']['mid'],hasil['result']['posts'][zx]['postInfo']['postId'],likeType=1002)
