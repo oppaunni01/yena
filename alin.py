@@ -10,7 +10,7 @@ cl.login(token="EmOTY0ff98gBOzHrozA9.3UrGMEjECFh9gbFk6EFekq.8f+lmPRu9oJtzkNP0oWg
 cl.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(token="Em7Nyce09tWS7yzSG3ke.F6loN/ws9FaPqFRwqoggJG.Cj6E9vwlnYcs+8/5XAijZeRrwaU2+uf4p2hjXECq0CI=")
+ki.login(token="EmKbxA5uaFyjjb8iPit2.bG/Q0ltc9LyFs73U82CdeG.CXuS3PsofhK04cRSt+Ra5JfVXWp8+YJzuG5WCBwhKig=")
 ki.loginResult()
 
 ki2 = LINETCR.LINE()
@@ -161,7 +161,7 @@ k3mid = k3.getProfile().mid
 
 Bots = [mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid,ki7mid,ki8mid,ki9mid,k1mid,k2mid,k3mid]
 admsa = "udee46099e25e71f1fd1817cae9e7c429"
-admin = "udee46099e25e71f1fd1817cae9e7c429"
+admin = "udee46099e25e71f1fd1817cae9e7c429","u060faad0b4c2f6561f4bbdeef3670312"
 
 wait = {
     'contact':False,
@@ -2470,56 +2470,23 @@ def bot(op):
 #-----------------------------------------------
 
 #-----------------------------------------------
-            elif msg.text.lower() == ["Moracam"]:
+            elif msg.text in ["mamcam"]:
+                if msg.from_ in admsa:
                         G = cl.getGroup(msg.to)
                         ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = False
                         cl.updateGroup(G)
                         invsend = 0
                         Ticket = cl.reissueGroupTicket(msg.to)
-                        cl.sendText(msg.to,"Cam-Cam😘 "  +  str(ginfo.name)  + "")
+                        cl.sendText(msg.to,"Cam-Cam😘 " + str(ginfo.name) + "")
                         ki.acceptGroupInvitationByTicket(msg.to,Ticket)
-#                        time.sleep(0.01)
-                        ki2.acceptGroupInvitationByTicket(msg.to,Ticket)
- #                       time.sleep(0.01)
-                        ki3.acceptGroupInvitationByTicket(msg.to,Ticket)
-  #                      time.sleep(0.01)
                         G = cl.getGroup(msg.to)
-                        ginfo = cl.getGroup(msg.to)
                         G.preventJoinByTicket = True
-                        random.choice(KAC).updateGroup(G)
+                        ki.updateGroup(G)
                         print "kicker ok"
                         G.preventJoinByTicket(G)
-                        random.choice(KAC).updateGroup(G)
-
-
+                        ki.updateGroup(G)
 #-----------------------------------------------
-            elif msg.text in ["ycam"]:
-                if msg.from_ in admin:
-                    G = cl.getGroup(msg.to)
-                    G.preventJoinByTicket = False
-                    cl.updateGroup(G)
-                    print "EXECUTED -- SUMMON BOT"
-                    invsend = 0
-                    Ticket = cl.reissueGroupTicket(msg.to)
-                    cl.sendText(msg.to,"Cam-Cam😘 "  +  str(ginfo.name)  + "")
-                    ki.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    ki2.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    ki3.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    ki4.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    ki5.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    ki6.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    ki7.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    ki8.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    ki9.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    k1.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    k2.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    k3.acceptGroupInvitationByTicket(msg.to,Ticket)
-                    G = kn.getGroup(msg.to)
-                    G.preventJoinByTicket = True
-                    kn.updateGroup(G)
-                    print "SUKSES -- SUMMON BOT"
-                    G.preventJoinByTicket(G)
             elif msg.text in ["Yenacam"]:
                 if msg.from_ in admsa:
                         G = cl.getGroup(msg.to)
@@ -2802,27 +2769,27 @@ def bot(op):
                     except:
                         pass
 
-            elif msg.text in ["Byemah"]:
-                if msg.toType == 2:
+            elif msg.text in ["yenabye"]:
+              if msg.from_ in admin:
                     ginfo = cl.getGroup(msg.to)
+                    print "EXECUTED -- BOT OUT GROUP"
                     try:
-                        cl.sendText(msg.to,"Bye Bye😘 "  +  str(ginfo.name)  + "")
-                        ki.leaveGroup(msg.to)
+                        cl.sendText(msg.to,"Bye Bye😘 " + str(ginfo.name) + "")
                         ki2.leaveGroup(msg.to)
                         ki3.leaveGroup(msg.to)
                         ki4.leaveGroup(msg.to)
                         ki5.leaveGroup(msg.to)
-                        ki6.leaveGroup(msg.to)
-                        ki7.leaveGroup(msg.to)
+                        ki6.leaveGroup(msg.to) ki7.leaveGroup(msg.to)
                         ki8.leaveGroup(msg.to)
                         ki9.leaveGroup(msg.to)
                         k1.leaveGroup(msg.to)
                         k2.leaveGroup(msg.to)
-                        k3.leaveGroup(mgg.to)
+                        k3.leaveGroup(msg.to)
+                        print "SUKSES -- BOT OUT GROUP"
                     except:
                         pass
 #-----------------------------------------------
-            elif "Pro1 bye" in msg.text:
+            elif "mah bye" in msg.text:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
