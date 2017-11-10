@@ -1245,7 +1245,40 @@ def bot(op):
                     cl.sendText(msg.to,"Diperbarui👈")
                 else:
                     cl.sendText(msg.to,"Silahkan Aktifkan Nama")
-
+            elif "x " in msg.text:
+                if msg.from_ in admin:
+                       nk0 = msg.text.replace("x ","")
+                       nk1 = nk0.lstrip()
+                       nk2 = nk1.replace("@","")
+                       nk3 = nk2.rstrip()
+                       _name = nk3
+                       gs = cl.getGroup(msg.to)
+                       ginfo = cl.getGroup(msg.to)
+                       gs.preventJoinByTicket = False
+                       cl.updateGroup(gs)
+                       invsend = 0
+                       Ticket = cl.reissueGroupTicket(msg.to)
+                       k3.acceptGroupInvitationByTicket(msg.to,Ticket)
+                       time.sleep(0.01)
+                       targets = []
+                       for s in gs.members:
+                           if _name in s.displayName:
+                              targets.append(s.mid)
+                       if targets == []:
+                           sendMessage(msg.to,"user does not exist")
+                           pass
+                       else:
+                           for target in targets:
+                                try:
+                                    k3.kickoutFromGroup(msg.to,[target])
+                                    print (msg.to,[g.mid])
+                                except:
+                                    ki18.leaveGroup(msg.to)
+                                    gs = cl.getGroup(msg.to)
+                        	    gs.preventJoinByTicket = True
+                        	    cl.updateGroup(gs)
+                                    gs.preventJoinByTicket(gs)
+                        	    cl.updateGroup(gs)
             elif msg.text == "Lurking":
                 if msg.toType == 2:
                     cl.sendText(msg.to, "Set reading point:" + datetime.now().strftime('\n%Y/%m/%d %H:%M:%S'))
@@ -1612,41 +1645,6 @@ def bot(op):
                     cl.updateGroup(group)
                 else:
                     cl.sendText(msg.to,"Tidak Dapat Mengubah Nama Grup")
-
-            elif "Nk " in msg.text:
-              if msg.from_ in admin:
-                       nk0 = msg.text.replace("Nk ","")
-                       nk1 = nk0.lstrip()
-                       nk2 = nk1.replace("@","")
-                       nk3 = nk2.rstrip()
-                       _name = nk3
-                       gs = cl.getGroup(msg.to)
-                       ginfo = cl.getGroup(msg.to)
-                       gs.preventJoinByTicket = False
-                       cl.updateGroup(gs)
-                       invsend = 0
-                       Ticket = cl.reissueGroupTicket(msg.to)
-                       k3.acceptGroupInvitationByTicket(msg.to,Ticket)
-#                       time.sleep(0.01)
-                       targets = []
-                       for s in gs.members:
-                           if _name in s.displayName:
-                              targets.append(s.mid)
-                       if targets == []:
-                           sendMessage(msg.to,"user does not exist")
-                           pass
-                       else:
-                           for target in targets:
-                                try:
-                                    k3.kickoutFromGroup(msg.to,[target]
-                                    print (msg.to,[g.mid])
-                                except:
-                                    ki18.leaveGroup(msg.to)
-                                    gs = cl.getGroup(msg.to)
-                        	    gs.preventJoinByTicket = True
-                        	    cl.updateGroup(gs)
-                                    gs.preventJoinByTicket(gs)
-                        	    cl.updateGroup(gs)
             elif "Kick: " in msg.text:
               if msg.from_ in admin:
                 midd = msg.text.replace("Kick: ","")
