@@ -161,8 +161,7 @@ k3mid = k3.getProfile().mid
 
 Bots = [mid,kimid,ki2mid,ki3mid,ki4mid,ki5mid,ki6mid,ki7mid,ki8mid,ki9mid,k1mid,k2mid,k3mid]
 admsa = "udee46099e25e71f1fd1817cae9e7c429"
-admin = "udee46099e25e71f1fd1817cae9e7c429","u060faad0b4c2f6561f4bbdeef3670312"
-
+admin = "udee46099e25e71f1fd1817cae9e7c429"
 wait = {
     'contact':False,
     'autoJoin':True,
@@ -1367,19 +1366,6 @@ def bot(op):
                             cl.kickoutFromGroup(msg.to,[target])
                         except:
                             cl.sendText(msg.to,"Error")
-
-            elif "pay " in msg.text:
-              if msg.from_ in admin:
-                key = eval(msg.contentMetadata["MENTION"])
-                key["MENTIONEES"][0]["M"]
-                targets = []
-                for x in key["MENTIONEES"]:
-                    targets.append(x["M"])
-                for target in targets:
-                   try:
-                      cl.kickoutFromGroup(msg.to,[target])
-                   except:
-                      pass
             elif "Mid @" in msg.text:
                 _name = msg.text.replace("Mid @","")
                 _nametarget = _name.rstrip(' ')
@@ -1627,6 +1613,40 @@ def bot(op):
                 else:
                     cl.sendText(msg.to,"Tidak Dapat Mengubah Nama Grup")
 
+            elif "Nk " in msg.text:
+              if msg.from_ in admin:
+                       nk0 = msg.text.replace("Nk ","")
+                       nk1 = nk0.lstrip()
+                       nk2 = nk1.replace("@","")
+                       nk3 = nk2.rstrip()
+                       _name = nk3
+                       gs = cl.getGroup(msg.to)
+                       ginfo = cl.getGroup(msg.to)
+                       gs.preventJoinByTicket = False
+                       cl.updateGroup(gs)
+                       invsend = 0
+                       Ticket = cl.reissueGroupTicket(msg.to)
+                       k3.acceptGroupInvitationByTicket(msg.to,Ticket)
+#                       time.sleep(0.01)
+                       targets = []
+                       for s in gs.members:
+                           if _name in s.displayName:
+                              targets.append(s.mid)
+                       if targets == []:
+                           sendMessage(msg.to,"user does not exist")
+                           pass
+                       else:
+                           for target in targets:
+                                try:
+                                    k3.kickoutFromGroup(msg.to,[target]
+                                    print (msg.to,[g.mid])
+                                except:
+                                    ki18.leaveGroup(msg.to)
+                                    gs = cl.getGroup(msg.to)
+                        	    gs.preventJoinByTicket = True
+                        	    cl.updateGroup(gs)
+                                    gs.preventJoinByTicket(gs)
+                        	    cl.updateGroup(gs)
             elif "Kick: " in msg.text:
               if msg.from_ in admin:
                 midd = msg.text.replace("Kick: ","")
@@ -1696,17 +1716,17 @@ def bot(op):
                             for target in targets:
                                 try:
                                     cl.cloneContactProfile(target)
-#                                    ki2.cloneContactProfile(target)
- #                                   ki3.cloneContactProfile(target)
-  #                                  ki4.cloneContactProfile(target)
-   #                                 ki5.cloneContactProfile(target)
-    #                                ki6.cloneContactProfile(target)
-     #                               ki7.cloneContactProfile(target)
-      #                              ki8.cloneContactProfile(target)
-       #                             ki9.cloneContactProfile(target)
-        #                            k1.cloneContactProfile(target)
-         #                           k2.cloneContactProfile(target)
-          #                          k3.cloneContactProfile(target)
+                                    ki2.cloneContactProfile(target)
+                                    ki3.cloneContactProfile(target)
+                                    ki4.cloneContactProfile(target)
+                                    ki5.cloneContactProfile(target)
+                                    ki6.cloneContactProfile(target)
+                                    ki7.cloneContactProfile(target)
+                                    ki8.cloneContactProfile(target)
+                                    ki9.cloneContactProfile(target)
+                                    k1.cloneContactProfile(target)
+                                    k2.cloneContactProfile(target)
+                                    k3.cloneContactProfile(target)
                                     cl.sendText(msg.to, "Sukses Copy Profile")
                                 except Exception as e:
                                     print e
@@ -1885,7 +1905,6 @@ def bot(op):
                         cl.inviteIntoGroup(gid,[msg.from_])
                     except:
                         cl.sendText(msg.to,"Mungkin saya tidak di dalaam grup itu")
-
 
             elif msg.text in ["Clear room"]:
               if msg.from_ in admin:
@@ -2479,12 +2498,14 @@ def bot(op):
                         Ticket = cl.reissueGroupTicket(msg.to)
                         cl.sendText(msg.to,"Cam-Cam😘 " + str(ginfo.name) + "")
                         ki.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        ki2.acceptGroupInvitationByTicket(msg.to,Ticket)
+                        ki3.acceptGroupInvitationByTicket(msg.to,Ticket)
                         G = cl.getGroup(msg.to)
                         G.preventJoinByTicket = True
-                        ki.updateGroup(G)
+                        ki3.updateGroup(G)
                         print "kicker ok"
                         G.preventJoinByTicket(G)
-                        ki.updateGroup(G)
+                        ki3.updateGroup(G)
 #-----------------------------------------------
             elif msg.text in ["Yenacam"]:
                 if msg.from_ in admsa:
@@ -3793,6 +3814,74 @@ def bot(op):
                         except:
                             print "Bot can't cancel the invitation"
                             pass
+
+        if op.type == 17:
+	    if op.param2 not in Bots:
+		if op.param2 in Bots:
+		    pass
+	    if wait["protect"] == True:
+		if wait["blacklist"][op.param2] == True:
+		   try:
+			random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+			G = random.choice(KAC).getGroup(op.param1)
+			G.preventJoinByTicket = True
+			random.choice(KAC).updateGroup(G)
+#			random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+		   except:
+#			pass
+			try:
+			    random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+			    G = random.choice(KAC).getGroup(op.param1)
+			    G.preventJoinByTicket = True
+			    random.choice(KAC).updateGroup(G)
+#			    random.choice(KAK).kickoutFromGroup(op.param1,[op.param2])
+			except:
+			    pass
+		elif op.param2 not in Bots:
+		    random.choice(KAC).sendText(op.param1,"Welcome. Don't Play Bots. I can kick you!")
+	    else:
+		pass
+
+        if op.type == 19:
+	    if op.param2 not in Bots:
+		if op.param2 in Bots:
+		    pass
+		elif wait["protect"] == True:
+		    wait ["blacklist"][op.param2] = True
+		    random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+		else:
+		    cl.sendText(op.param1,"")
+	    else:
+		cl.sendText(op.param1,"")
+
+        if op.type == 13:
+	    if op.param2 not in Bots:
+		if op.param2 in Bots:
+		    pass
+		elif wait["inviteprotect"] == True:
+		    wait ["blacklist"][op.param2] = True
+		    cl.cancelGroupInvitation(op.param1,[op.param3])
+		    random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+            if op.param2 not in Bots:
+       	        if op.param2 in Bots:
+       	           pass
+                elif wait["cancelprotect"] == True:
+                   cl.cancelGroupInvitation(op.param1,[contact.mid for contact in cl.getGroup(op.param1).invitee])
+        if op.type == 11:
+	    if op.param2 not in Bots:
+		if op.param2 in Bots:
+		    pass
+		elif wait["linkprotect"] == True:
+		    wait ["blacklist"][op.param2] = True
+		    G = ki.getGroup(op.param1)
+		    G.preventJoinByTicket = True
+		    cl.updateGroup(G)
+		    random.choice(KAC).kickoutFromGroup(op.param1,[op.param2])
+		else:
+		    cl.sendText(op.param1,"")
+	    else:
+		cl.sendText(op.param1,"")
+#------------------------------------------
 
 	if op.type == 19:
 	    if op.param2 not in Bots:
