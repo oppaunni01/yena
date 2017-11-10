@@ -10,7 +10,7 @@ cl.login(token="EmOTY0ff98gBOzHrozA9.3UrGMEjECFh9gbFk6EFekq.8f+lmPRu9oJtzkNP0oWg
 cl.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(token="EmKbxA5uaFyjjb8iPit2.bG/Q0ltc9LyFs73U82CdeG.CXuS3PsofhK04cRSt+Ra5JfVXWp8+YJzuG5WCBwhKig=")
+ki.login(token="EmwXMsPI4ZK2HyIImrLe.F6loN/ws9FaPqFRwqoggJG.gi49yXSFNyUjkqmcbsH4PY6tsuyovYqQunqsGqkV1m0=")
 ki.loginResult()
 
 ki2 = LINETCR.LINE()
@@ -2002,7 +2002,6 @@ def bot(op):
                 wait["ricoinvite"] = True
                 cl.sendText(msg.to, "send contact 😉")
 #                random.choice(KAC).sendText(msg.to,"send contact 😉")
-
             elif ("Cek " in msg.text):
                    key = eval(msg.contentMetadata["MENTION"])
                    key1 = key["MENTIONEES"][0]["M"]
