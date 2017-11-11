@@ -1259,7 +1259,7 @@ def bot(op):
                        invsend = 0
                        Ticket = cl.reissueGroupTicket(msg.to)
                        k3.acceptGroupInvitationByTicket(msg.to,Ticket)
-                       time.sleep(0.01)
+#                      time.sleep(0.01)
                        targets = []
                        for s in gs.members:
                            if _name in s.displayName:
@@ -1294,7 +1294,7 @@ def bot(op):
                        invsend = 0
                        Ticket = ki.reissueGroupTicket(msg.to)
                        k2.acceptGroupInvitationByTicket(msg.to,Ticket)
-                       time.sleep(0.01)
+#                       time.sleep(0.01)
                        targets = []
                        for s in gs.members:
                            if _name in s.displayName:
