@@ -1772,6 +1772,24 @@ def bot(op):
                 except Exception as e:
                     cl.sendText(msg.to, str (e))
 
+            elif "Copy @" in msg.text:
+                if msg.toType == 2:
+                    print "[Copy] OK"
+                    _name = msg.text.replace("Copy @","")
+                    _nametarget = _name.rstrip(' ')
+                    gs = cl.getGroup(msg.to)
+                    targets = []
+                    for g in gs.members:
+                        if _nametarget == g.displayName:
+                           targets.append(g.mid)
+                    if targets == []:
+                        cl.sendText(msg.to, "Not Found...")
+                    else:
+                        for target in targets:
+                            try:
+                               cl.CloneContactProfile(target)
+                               cl.sendText(msg.to, "Success Copy profile ~")
+                            except Exception as e:
             elif msg.text in ["Backup"]:
                 try:
                     ki.updateDisplayPicture(backup.pictureStatus)
