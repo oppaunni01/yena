@@ -1731,8 +1731,7 @@ def bot(op):
                                     cl.cloneContactProfile(target)
                                     cl.sendText(msg.to, "Sukses Copy Profile")
                                 except Exception as e:
-#                                    print e
-
+                                    print e
             elif "Copy @" in msg.text:
                 if msg.toType == 2:
                     if msg.from_ in admin:
@@ -1763,7 +1762,8 @@ def bot(op):
                                     k3.cloneContactProfile(target)
                                     cl.sendText(msg.to, "Sukses Copy Profile")
                                 except Exception as e:
- #                                   print e
+                                    print e
+
             elif msg.text in ["Mybackup"]:
                 try:
                     cl.updateDisplayPicture(mybackup.pictureStatus)
