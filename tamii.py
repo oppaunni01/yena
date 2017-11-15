@@ -83,7 +83,7 @@ kt.login(token="Emr39Qj5l17pXYdjQU54.srjUosW4RgcA0sSjVMH6Ta.K5kMt8P65yFacfoI86ZC
 kt.loginResult()
 
 
-print "Tamii Bot"
+print "U.k_Morayena Bot"
 reload(sys)
 sys.setdefaultencoding('utf-8')
 helpMessage ="""
