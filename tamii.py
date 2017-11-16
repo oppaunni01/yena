@@ -88,7 +88,7 @@ ks.login(token="EmiBotJ5eCYosunECLPc.cTXHQLZwcjas2Whcxxlhda.SaSmK44Hsu3L/Kqq9L4O
 ks.loginResult()
 
 kt = LINETCR.LINE()
-kt.login(token="Emr39Qj5l17pXYdjQU54.srjUosW4RgcA0sSjVMH6Ta.K5kMt8P65yFacfoI86ZCK8TM4mC7p7FBa1FwOu9xq7g=")
+kt.login(token="Em5d6ztrOIT2UMstWSK4.srjUosW4RgcA0sSjVMH6Ta.pIYl4SiDdsMEWsPazAC32rMkmhhg7MShoqcHuYumuuk=")
 kt.loginResult()
 
 print "U.k kalem Bot"
@@ -2865,7 +2865,8 @@ def bot(op):
 				msg.contentType = 13
 				msg.contentMetadata = {'mid': mid}
 				cl.sendMessage(msg)
-				cl.sendText(msg.to,"My Creator 👉Tamii PSD T&Z TEAM ")
+				cl.sendText(msg.to,"My Creator 👉U.k-MorYena")
+
             elif "Id" == msg.text:
                 key = msg.to
                 cl.sendText(msg.to, key)
@@ -4659,7 +4660,9 @@ def bot(op):
                 start = time.time()
                 cl.sendText(msg.to, "Access time Waiting...")
                 elapsed_time = time.time() - start
-                cl.sendText(msg.to, "%s<==Tamii Server" % (elapsed_time))
+                cl.sendText(msg.to, "%s<==U-K ]]Server lelet" % (elapsed_time))
+
+
 # ----------------- BAN MEMBER BY TAG 2TAG ATAU 10TAG MEMBER
             elif ("Bl " in msg.text):
               if msg.from_ in admin:
