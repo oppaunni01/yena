@@ -7,7 +7,6 @@ import time,random,sys,json,codecs,threading,glob,re
 
 cl = LINETCR.LINE()
 cl.login(qr=True)
-cl.loginResult()
 
 ki = LINETCR.LINE()
 ki.login(qr=True)
