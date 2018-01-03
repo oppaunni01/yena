@@ -7,7 +7,7 @@ import json
 from random import randint
 
 def def_callback(str):
-    print "\nKRIS LOGIN URL: "+str+"\n"
+    print "\nUK MORAYENA LOGIN URL: "+str+"\n"
 
 class LINE:
 
@@ -441,7 +441,7 @@ class LINE:
       prof = self.getProfile()
 
       print("╔════════════════════════════════════════════════════\n╠❂➣❂➣ Mid Kamu -> " + prof.mid)
-      print("╠❂➣❂➣ Nama Akun -> " + prof.displayName)
-      print("╠❂➣❂➣ AuthToken Kamu -> " + self.authToken)
-      print("╠❂➣❂➣ Cert Kamu -> " + self.cert if self.cert is not None else "╠════════════════════════════════════════════════════\n╠❂➣❂➣ Cyber-Army_Bots\n╠❂➣❂➣ line://ti/p/~krissthea\n╚════════════════════════════════════════════════════")
-      print("═══════════[Team-CAB]═══════════\n═══════════[C-A_Bots]═══════════\n═════════════[Kris]═════════════")
+      print("╠❂➣ Nama Akun -> " + prof.displayName)
+      print("╠❂➣ AuthToken Kamu -> " + self.authToken)
+      print("╠❂➣ Cert Kamu -> " + self.cert if self.cert is not None else "╠════════════════════════════════════════════════════\n╠❂➣ Uk_Morayena\n╠❂➣ Uk-Kalem\n╚════════════════════════════════════════════════════")
+      print("═══════════[UK-KALEM]═══════════\n═══════════[C-A_Bots]═══════════\n═════════════[U.K_MORAYENA]═════════════")
