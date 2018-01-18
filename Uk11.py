@@ -12,47 +12,47 @@ from threading import Thread
 from googletrans import Translator
 
 cl = LINETCR.LINE()
-cl.login(token='')#uk1
+cl.login(token='EooEuoL8b5qJYLIN25l9.3UrGMEjECFh9gbFk6EFekq.kvQPsk4Cbf1Oe5a6xVTXG/sqIo8bSW3aDp+1NeL7GwM=')#uk1
 cl.loginResult()
 
 ki = LINETCR.LINE()
-ki.login(token='')#uk2
+ki.login(token='EopoZQ49sfSOAX6hBeH7.KN6gqRyZQ0iuRiU5jNIj1W.xbYexNOBmhqAs3waOGtE/MkcIFPa3EKEr3KESNyS6Xk=')#uk2
 ki.loginResult()
 
-kk = Han.LINE()
-kk.login(token='')#uk3
+kk = LINETCR.LINE()
+kk.login(token='EorfCRZClyvMN3MB9VOe.F6loN/ws9FaPqFRwqoggJG.FmFHkhig5zIMiHQwdNDd7Mq9K4LeuK8cXTEL4LDo38w=')#uk3
 kk.loginResult()
 
 kc = LINETCR.LINE()
-kc.login(token='')#uk4
+kc.login(token='EoXBecqW3ERWe7LBgJg3.9qPM7NC2vWiRtQTZ/x4SyW.jAIYdZ+leAeW1/MLtZcWvqQLNkGkqmGcYnZsZmQ/NDk=')#uk4
 kc.loginResult()
 
 kg = LINETCR.LINE()
-kg.login(token='')#uk5
+kg.login(token='EoLs7GzeWQvBTHe8PG6e.9lU+Lm8IEAdBW1wrKZGG7G.6qNWB1Ch2MBwISjX5ZFUvoIDyBGvR9vEI46dtAE2+eQ=')#uk5
 kg.loginResult()
 
 kh = LINETCR.LINE()
-kh.login(token='')#uk5
+kh.login(token='Eod7dzA8UvmD1IxCZmPa.4873flXX7QJRw4jo2j7roG.fWe5i9/VBidflBRmvSvAy0XpfRJVwpvWKUOKIxLl+2o=')#uk6
 kh.loginResult()
 
 ka = LINETCR.LINE()
-ka.login(token='')#uk6
+ka.login(token='EogbsaEup2vVM5mxtdB8.MQvnSQmxLZyecm+cYLEska.IjlXmLZLDqz59W1LM/TIkILZ+nnGakSVGVCiECXO9Is=')#uk7
 ka.loginResult()
 
 kb = LINETCR.LINE()
-kb.login(token='')#uk7
+kb.login(token='EoB6OhiaRd2em6cV5Nu6.xkaL7HAdfdzB4bRIIC04jG.VummEw+rE6v+WwQzUjnfqUCMMMHQ7puipbooYzf/NE8=')#uk8
 kb.loginResult()
 
 kd = LINETCR.LINE()
-kd.login(token='')#uk8
+kd.login(token='Eoiau00seLMIDdNJY150.X7ONBO4L4YtA49fO3i6lua.1dmRvQWkoDQ+/zWe1XyF92JaB8spDNF+zi8fLWcuC9k=')#uk9
 kd.loginResult()
 
 ke = LINETCR.LINE()
-ke.login(token='')#uk9
+ke.login(token='EottLf29uAXUnlRbVJdb.tyEjT4SUhBFf7gJV34m+gW./n/Z5f1ID/4y/77xJGctC0D/igq8J6tI8kY4rLBz+0s=')#uk10
 ke.loginResult()
 
 mr = LINETCR.LINE()
-mr.login(token='')#mr
+mr.login(token='EojgEBlv4nUUyHe93di4.srjUosW4RgcA0sSjVMH6Ta.dLECyIIo8gVt7ZUViaadrwIcACEWRYSLthu8gBoWl6o=')#mr
 mr.loginResult()
 
 print "uk mora-yena login success"
@@ -229,7 +229,7 @@ Hmid = kd.getProfile().mid
 Imid = ke.getProfile().mid
 
 Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid,Fmid,Gmid,Hmid,Imid]
-admin=["u761c4f29d0d8028f9d4e216932e6c444"]
+admin=["udee46099e25e71f1fd1817cae9e7c429"]
 
 with open('bl.json') as fp:
     wait3 = json.load(fp)
@@ -245,7 +245,7 @@ wait = {
     "lang":"JP",
     "comment":"Thanks for add me",
     "clock":False,
-    "cName":"x‮nahyaR.",
+    "cName":"!💋🕉unni͡° ͜ʖ ͡°oppa",
     "sticker":False,
     "ProtectKick":False,
     "ProtectQR":False,
@@ -268,6 +268,12 @@ wait2 = {
     'ROM':{}
     }
     
+wait3 = {
+    "copy":False,
+    "copy2":"target",
+    "target":{}
+    }
+
 settings = {
     "simiSimi":{}
     }
@@ -288,6 +294,8 @@ backup.statusMessage = contact.statusMessage
 backup.pictureStatus = contact.pictureStatus
 
 mulai = time.time()
+
+agent = {'User-Agent' : "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727; .NET CLR 3.0.04506.30)"}
 
 def download_page(url):
     version = (3,0)
@@ -316,6 +324,28 @@ def download_page(url):
             return"Page Not found"
 
 #Finding 'Next Image' from the given raw page
+
+
+def yt(query):
+    with requests.session() as s:
+         isi = []
+         if query == "":
+             query = "S1B tanysyz" 
+         s.headers['user-agent'] = 'Mozilla/5.0'
+         url = 'http://www.youtube.com/results'
+         params = {'search_query': query}
+         r = s.get(url, params=params)
+         soup = BeautifulSoup(r.content, 'html5lib')
+         for a in soup.select('.yt-lockup-title > a[title]'):
+            if '&list=' not in a['href']:
+                if 'watch?v' in a['href']:
+                    b = a['href'].replace('watch?v=', '')
+                    isi += ['youtu.be' + b]
+         return isi
+
+def post_content(self, urls, data=None, files=None):
+        return self._session.post(urls, headers=self._headers, data=data, files=files)
+
 def _images_get_next_item(s):
     start_line = s.find('rg_di')
     if start_line == -1:    #If no links are found then give an error!
@@ -463,6 +493,10 @@ def summon(to, nama):
     except Exception as error:
        print error
        
+def restart_program():
+    python = sys.executable
+    os.execl(python, python, * sys.argv)
+
 def waktu(secs):
     mins, secs = divmod(secs,60)
     hours, mins = divmod(mins,60)
@@ -1219,7 +1253,7 @@ def bot(op):
             msg = op.message
             if msg.toType == 0:
                 msg.to = msg.from_
-                if msg.from_ == "u761c4f29d0d8028f9d4e216932e6c444":
+                if msg.from_ == "udee46099e25e71f1fd1817cae9e7c429":
                     if "join:" in msg.text:
                         list_ = msg.text.split(":")
                         try:
@@ -1507,52 +1541,52 @@ def bot(op):
                     midd = msg.text.replace("Invite ","")
                     cl.findAndAddContactsByMid(midd)
                     cl.inviteIntoGroup(msg.to,[midd])
-            elif "Han1 invite " in msg.text:
+            elif "Uk1 invite " in msg.text:
                 if msg.from_ in admin:
-                    midd = msg.text.replace("Han1 invite ","")
+                    midd = msg.text.replace("Uk1 invite ","")
                     ki.findAndAddContactsByMid(midd)
                     ki.inviteIntoGroup(msg.to,[midd])
-            elif "Han2 invite " in msg.text:
+            elif "Uk2 invite " in msg.text:
                 if msg.from_ in admin:
-                    midd = msg.text.replace("Han2 invite ","")
+                    midd = msg.text.replace("Uk2 invite ","")
                     kk.findAndAddContactsByMid(midd)
                     kk.inviteIntoGroup(msg.to,[midd])
-            elif "Han3 invite " in msg.text:
+            elif "Uk3 invite " in msg.text:
                 if msg.from_ in admin:
-                    midd = msg.text.replace("Han3 invite ","")
+                    midd = msg.text.replace("Uk3 invite ","")
                     kc.findAndAddContactsByMid(midd)
                     kc.inviteIntoGroup(msg.to,[midd])
-            elif "Han4 invite " in msg.text:
+            elif "Uk4 invite " in msg.text:
                 if msg.from_ in admin:
-                    midd = msg.text.replace("Han4 invite ","")
+                    midd = msg.text.replace("Uk4 invite ","")
                     kh.findAndAddContactsByMid(midd)
                     kh.inviteIntoGroup(msg.to,[midd])
-            elif "Han5 invite " in msg.text:
+            elif "Uk5 invite " in msg.text:
                 if msg.from_ in admin:
-                    midd = msg.text.replace("Han5 invite ","")
+                    midd = msg.text.replace("Uk5 invite ","")
                     kg.findAndAddContactsByMid(midd)
                     kg.inviteIntoGroup(msg.to,[midd])
-            elif "Han6 invite " in msg.text:
+            elif "Uk6 invite " in msg.text:
                 if msg.from_ in admin:
-                    midd = msg.text.replace("Han6 invite ","")
+                    midd = msg.text.replace("Uk6 invite ","")
                     ka.findAndAddContactsByMid(midd)
                     ka.inviteIntoGroup(msg.to,[midd])
-            elif "Han7 invite " in msg.text:
+            elif "Uk7 invite " in msg.text:
                 if msg.from_ in admin:
-                    midd = msg.text.replace("Han7 invite ","")
+                    midd = msg.text.replace("Uk7 invite ","")
                     kb.findAndAddContactsByMid(midd)
                     kb.inviteIntoGroup(msg.to,[midd])
-            elif "Han8 invite " in msg.text:
+            elif "Uk8 invite " in msg.text:
                 if msg.from_ in admin:
-                    midd = msg.text.replace("Han8 invite ","")
+                    midd = msg.text.replace("Uk8 invite ","")
                     kd.findAndAddContactsByMid(midd)
                     kd.inviteIntoGroup(msg.to,[midd])
-            elif "Han9 invite " in msg.text:
+            elif "Uk9 invite " in msg.text:
                 if msg.from_ in admin:
-                    midd = msg.text.replace("Han9 invite ","")
+                    midd = msg.text.replace("Uk9 invite ","")
                     ke.findAndAddContactsByMid(midd)
                     ke.inviteIntoGroup(msg.to,[midd])
-            elif msg.text in ["My Han"]:
+            elif msg.text in ["My Uk"]:
                 if msg.from_ in admin:
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': Amid}
@@ -1594,47 +1628,47 @@ def bot(op):
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': mid}
                     cl.sendMessage(msg)
-            elif msg.text in ["Han1"]:
+            elif msg.text in ["Uk1"]:
                 if msg.from_ in admin:
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': Amid}
                     ki.sendMessage(msg)
-            elif msg.text in ["Han2"]:
+            elif msg.text in ["Uk2"]:
                 if msg.from_ in admin:
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': Bmid}
                     kk.sendMessage(msg)
-            elif msg.text in ["Han3"]:
+            elif msg.text in ["Uk3"]:
                 if msg.from_ in admin:
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': Cmid}
                     kc.sendMessage(msg)
-            elif msg.text in ["Han4"]:
+            elif msg.text in ["Uk4"]:
                 if msg.from_ in admin:
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': Dmid}
                     kh.sendMessage(msg)
-            elif msg.text in ["Han5"]:
+            elif msg.text in ["Uk5"]:
                 if msg.from_ in admin:
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': Emid}
                     kg.sendMessage(msg)
-            elif msg.text in ["Han6"]:
+            elif msg.text in ["Uk6"]:
                 if msg.from_ in admin:
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': Fmid}
                     ka.sendMessage(msg)
-            elif msg.text in ["Han7"]:
+            elif msg.text in ["Uk7"]:
                 if msg.from_ in admin:
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': Gmid}
                     kb.sendMessage(msg)
-            elif msg.text in ["Han8"]:
+            elif msg.text in ["Uk8"]:
                 if msg.from_ in admin:
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': Hmid}
                     kd.sendMessage(msg)
-            elif msg.text in ["Han9"]:
+            elif msg.text in ["Uk9"]:
                 if msg.from_ in admin:
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': Imid}
@@ -1784,7 +1818,7 @@ def bot(op):
                         cl.sendText(msg.to,"Can not be used outside the group")
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
-            elif msg.text in ["Han1 ourl","Han1 link on"]:
+            elif msg.text in ["Uk1 ourl","Uk1 link on"]:
                 if msg.from_ in admin:
                     X = cl.getGroup(msg.to)
                     X.preventJoinByTicket = False
@@ -1798,7 +1832,7 @@ def bot(op):
                         cl.sendText(msg.to,"Can not be used outside the group")
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
-            elif msg.text in ["Han2 ourl","Han2 link on"]:
+            elif msg.text in ["Uk2 ourl","Uk2 link on"]:
                 if msg.from_ in admin:
                     X = kk.getGroup(msg.to)
                     X.preventJoinByTicket = False
@@ -1812,7 +1846,7 @@ def bot(op):
                         kk.sendText(msg.to,"Can not be used outside the group")
                     else:
                         kk.sendText(msg.to,"Not for use less than group")
-            elif msg.text in ["Han3 ourl","Han3 link on"]:
+            elif msg.text in ["Uk3 ourl","Uk3 link on"]:
                 if msg.from_ in admin:
                     X = kc.getGroup(msg.to)
                     X.preventJoinByTicket = False
@@ -1840,7 +1874,7 @@ def bot(op):
                         cl.sendText(msg.to,"Can not be used outside the group")
                     else:
                         cl.sendText(msg.to,"Not for use less than group")
-            elif msg.text in ["Han1 curl","Han1 link off"]:
+            elif msg.text in ["Uk1 curl","Uk1 link off"]:
                 if msg.from_ in admin:
                     X = ki.getGroup(msg.to)
                     X.preventJoinByTicket = True
@@ -1854,7 +1888,7 @@ def bot(op):
                         ki.sendText(msg.to,"Can not be used outside the group")
                     else:
                         ki.sendText(msg.to,"Not for use less than group")
-            elif msg.text in ["Han2 curl","Han2 link off"]:
+            elif msg.text in ["Uk2 curl","Uk2 link off"]:
                 if msg.from_ in admin:
                     X = kk.getGroup(msg.to)
                     X.preventJoinByTicket = True
@@ -1868,7 +1902,7 @@ def bot(op):
                         kk.sendText(msg.to,"Can not be used outside the group")
                     else:
                         kk.sendText(msg.to,"Not for use less than group")
-            elif msg.text in ["Han3 curl","Han3 link off"]:
+            elif msg.text in ["Uk3 curl","Uk3 link off"]:
                 if msg.from_ in admin:
                     X = kc.getGroup(msg.to)
                     X.preventJoinByTicket = True
@@ -1943,31 +1977,31 @@ def bot(op):
             elif "Mid" == msg.text:
                 if msg.from_ in admin:
                     cl.sendText(msg.to,mid)
-            elif "Han1 mid" == msg.text:
+            elif "Uk1 mid" == msg.text:
                 if msg.from_ in admin:
                     ki.sendText(msg.to,Amid)
-            elif "Han2 mid" == msg.text:
+            elif "Uk2 mid" == msg.text:
                 if msg.from_ in admin:
                     kk.sendText(msg.to,Bmid)
-            elif "Han3 mid" == msg.text:
+            elif "Uk3 mid" == msg.text:
                 if msg.from_ in admin:
                     kc.sendText(msg.to,Cmid)
-            elif "Han4 mid" == msg.text:
+            elif "Uk4 mid" == msg.text:
                 if msg.from_ in admin:
                     kh.sendText(msg.to,Dmid)
-            elif "Han5 mid" == msg.text:
+            elif "Uk5 mid" == msg.text:
                 if msg.from_ in admin:
                     kg.sendText(msg.to,Emid)
-            elif "Han6 mid" == msg.text:
+            elif "Uk6 mid" == msg.text:
                 if msg.from_ in admin:
                     ka.sendText(msg.to,Fmid)
-            elif "Han7 mid" == msg.text:
+            elif "Uk7 mid" == msg.text:
                 if msg.from_ in admin:
                     kb.sendText(msg.to,Gmid)
-            elif "Han8 mid" == msg.text:
+            elif "Uk8 mid" == msg.text:
                 if msg.from_ in admin:
                     kd.sendText(msg.to,Hmid)
-            elif "Han9 mid" == msg.text:
+            elif "Uk9 mid" == msg.text:
                 if msg.from_ in admin:
                     ke.sendText(msg.to,Imid)
             elif msg.text in ["Numpang Lewat"]:
@@ -3110,6 +3144,97 @@ def bot(op):
                       except Exception as e:
                           cl.sendText(msg.to, "failed")
                           print e
+
+
+            elif "Mycopy @" in msg.text:
+                if msg.toType == 2:
+                    if msg.from_ in admin:
+                        print "[COPY] Ok"
+                        _name = msg.text.replace("Mycopy @","")
+                        _nametarget = _name.rstrip(' ')
+                        gs = cl.getGroup(msg.to)
+                        targets = []
+                        for g in gs.members:
+                            if _nametarget == g.displayName:
+                                targets.append(g.mid)
+                        if targets == []:
+                            cl.sendText(msg.to, "Tidak Ada Target Copy")
+                        else:
+                            for target in targets:
+                                try:
+                                    cl.cloneContactProfile(target)
+                                    cl.sendText(msg.to, "Sukses Copy Profile")
+                                except Exception as e:
+                                    print e
+
+
+
+            elif msg.text in ["Mybackup"]:
+                try:
+                    cl.updateDisplayPicture(mybackup.pictureStatus)
+                    cl.updateProfile(mybackup)
+                    cl.sendText(msg.to, "Backup Sukses Bosqu")
+                except Exception as e:
+                    cl.sendText(msg.to, str (e))
+
+#================================================
+
+            elif "Copy @" in msg.text:
+                if msg.toType == 2:
+                    if msg.from_ in admin:
+                        print "[COPY] Ok"
+                        _name = msg.text.replace("Copy @","")
+                        _nametarget = _name.rstrip(' ')
+                        gs = cl.getGroup(msg.to)
+                        targets = []
+                        for g in gs.members:
+                            if _nametarget == g.displayName:
+                                targets.append(g.mid)
+                        if targets == []:
+                            cl.sendText(msg.to, "Tidak Ada Target Copy")
+                        else:
+                            for target in targets:
+                                try:
+                                    ki.cloneContactProfile(target)
+                                    kk.cloneContactProfile(target)
+                                    kc.cloneContactProfile(target)
+                                    kh.cloneContactProfile(target)
+                                    kg.cloneContactProfile(target)
+                                    ka.cloneContactProfile(target)
+                                    kb.cloneContactProfile(target)
+                                    kd.cloneContactProfile(target)
+                                    ke.cloneContactProfile(target)
+                                    cl.sendText(msg.to, "Sukses Copy Profile")
+                                except Exception as e:
+                                    print e
+
+
+
+
+            elif msg.text in ["Kembali"]:
+                try:
+                    ki.updateDisplayPicture(backup.pictureStatus)
+                    ki.updateProfile(backup)
+                    kk.updateDisplayPicture(backup.pictureStatus)
+                    kk.updateProfile(backup)
+                    kc.updateDisplayPicture(backup.pictureStatus)
+                    kc.updateProfile(backup)
+                    kh.updateDisplayPicture(backup.pictureStatus)
+                    kh.updateProfile(backup)
+                    kg.updateDisplayPicture(backup.pictureStatus)
+                    kg.updateProfile(backup)
+                    ka.updateDisplayPicture(backup.pictureStatus)
+                    ka.updateProfile(backup)
+                    kb.updateDisplayPicture(backup.pictureStatus)
+                    kb.updateProfile(backup)
+                    kd.updateDisplayPicture(backup.pictureStatus)
+                    kd.updateProfile(backup)
+                    ke.updateDisplayPicture(backup.pictureStatus)
+                    ke.updateProfile(backup)
+                    cl.sendText(msg.to, "Backup Sukses Bosqu")
+                except Exception as e:
+                    cl.sendText(msg.to, str (e))
+
 #----------------------------------------
             elif ("Ban " in msg.text):
               if msg.from_ in admin:
@@ -3236,7 +3361,7 @@ def bot(op):
                    except:
                       pass                        
 #----------------------------------------
-            elif "Han:groupcreator" == msg.text:
+            elif "Uk:groupcreator" == msg.text:
                 if msg.from_ in admin:
                             try:
                                 group = cl.getGroup(msg.to)
@@ -3264,15 +3389,15 @@ def bot(op):
                     except Exception as e:
                        cl.sendText(msg.to, str(e))
 #----------------------------------------
-            elif msg.text in ["Han:creator"]:
+            elif msg.text in ["Uk:creator"]:
                 if msg.toType == 2:
                       msg.contentType = 13
-                      Creatorbot = "u761c4f29d0d8028f9d4e216932e6c444"
+                      Creatorbot = "udee46099e25e71f1fd1817cae9e7c429"
                       try:
                           msg.contentMetadata = {'mid': Creatorbot}
                       except:
                         Creatorbot = "Error"
-                      ki.sendText(msg.to, "My Creator : Rayhan")
+                      ki.sendText(msg.to, "My Creator : Uk_morayena")
                       ki.sendMessage(msg)
 #----------------------------------------
             elif msg.text in ["Tag"]:
@@ -3314,7 +3439,7 @@ def bot(op):
             elif msg.text.lower() == '.....':
                 if msg.from_ in admin:
                     msg.contentType = 13
-                    msg.contentMetadata = {'mid': "ua7fb5762d5066629323d113e1266e8ca',"}
+                    msg.contentMetadata = {'mid': "udee46099e25e71f1fd1817cae9e7c429',"}
                     cl.sendMessage(msg)        
                     
             elif msg.text in ["Memlist"]:
@@ -3471,6 +3596,21 @@ def bot(op):
                         cl.sendText(msg.to,hasil)
                         print '[Command] Youtube Search'
 
+
+            elif "youtube:" in msg.text.lower():
+                if msg.from_ in admin:
+                   query = msg.text.split(":")
+                   try:
+                       if len(query) == 3:
+                           isi = yt(query[2])
+                           hasil = isi[int(query[1])-1]
+                           cl.sendText(msg.to, hasil)
+                       else:
+                           isi = yt(query[1])
+                           cl.sendText(msg.to, isi[0])
+                   except Exception as e:
+                       cl.sendText(msg.to, str(e))
+
             elif "Lirik " in msg.text:
                 if msg.from_ in admin:
                     try:
@@ -3508,6 +3648,7 @@ def bot(op):
                           except Exception as e:
                               cl.sendText(msg.to, str(e))
                               
+
             elif 'instagram ' in msg.text.lower():
               if msg.from_ in admin:
                 try:
@@ -3814,7 +3955,9 @@ def bot(op):
                  tts = gTTS(psn, lang='id', slow=False)
                  tts.save('tts.mp3')
                  cl.sendAudio(msg.to, 'tts.mp3')            
-#-----------------------------------------------
+
+#===============================
+
             elif msg.text.lower() == 'cpu':
                 if msg.from_ in admin:
                     botKernel = subprocess.Popen(["cat","/proc/cpuinfo"], stdout=subprocess.PIPE).communicate()[0]
@@ -3840,6 +3983,15 @@ def bot(op):
                     eltime = time.time() - mulai
                     van = "Bot sudah berjalan selama "+waktu(eltime)
                     cl.sendText(msg.to,van)
+            elif msg.text.lower() == '.reboot':
+                    print "[Command]Like executed"
+                    try:
+                        cl.sendText(msg.to,"Restarting...")
+                        restart_program()
+                    except:
+                        cl.sendText(msg.to,"Please wait")
+                        restart_program()
+                        pass
 #-----------------------------------------------
             elif "Apakah " in msg.text:
                 tanya = msg.text.replace("Apakah ","")
