@@ -40,7 +40,7 @@ k1.loginResult()
 
 k2 = LINETCR.LINE() #cobra
 #k2.login(qr=True)
-k2.login(token="EpAdHCx6PX1setY3QMo8.MQvnSQmxLZyecm+cYLEska.0oNiULGcMJdu4XPxBpktShdu+NxI7crH33MpTHuv/iw=")
+k2.login(token="EplUv9dDNIHppWxBaxi8.MQvnSQmxLZyecm+cYLEska.ijODyHaQ4EMCVRRAyhKaHnfKcjbO2lD3StdYlm8oNek=")
 k2.loginResult()
 
 k3 = LINETCR.LINE() #
